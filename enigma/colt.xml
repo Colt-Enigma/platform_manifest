@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="colt"
+           fetch="https://github.com/Colt-Enigma"
+           revision="refs/heads/cos9" />
+		  
+  <!-- FIRST: Remove unused/forked AOSP Projects -->
+  <include name="enigma/remove.xml" />
+
+  <!-- Let's Add Colt-AOSP Repos -->
+  <include name="enigma/cos.xml" />
+  <include name="enigma/vendors.xml" />
+  <include name="enigma/halsdependancy.xml" />
+
+</manifest>

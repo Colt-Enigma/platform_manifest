@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+<!-- vendor -->
+    <project path="vendor/colt" name="platform_vendor_colt" remote="colt" revision="cos9" />
+    <project path="vendor/qcom/opensource/dataservices" name="platform_vendor_qcom_opensource_dataservices" remote="colt" revision="cos9" />
+    <project path="vendor/qcom/opensource/interfaces" name="platform_vendor_qcom_opensource_interfaces" remote="colt" revision="cos9" />
+    <project path="vendor/qcom/opensource/dpm" name="platform_vendor_qcom_opensource_dpm" remote="colt" revision="cos9" />
+    <project path="vendor/codeaurora/telephony" name="platform_vendor_codeaurora_telephony" remote="colt" revision="cos9" />
+
+
+</manifest>

@@ -1,0 +1,64 @@
+Colt-AOSP : Let's Get Started :)
+===============================
+
+![ColtOS](https://github.com/ColtAOSP/platform_manifest/blob/cos8.x/colt_logo.gif)
+
+ColtOS Project
+===============
+ColtOS Project is a team of learners and based on aosp with some customizations.
+
+ColtOS on Social Media
+======================
+[![](https://github.com/ColtOS/manifest/blob/cos7.x/gplus.png)](https://plus.google.com/u/2/communities/102067248475500399675)[![](https://github.com/ColtOS/manifest/blob/cos7.x/telegram.png)](https://t.me/ColtChatBox)
+
+
+How to Build?
+-------------
+### Getting the source
+- Making required directories
+- Obtaining the repo binary
+- Adding repo binary to your path
+- Giving the repo binary proper permissions
+- Initializing an empty repo
+- Syncing the repo
+
+Alright, so now we’re getting there. I have outlined the basics of what we’re about to do and broke them down as I know them. This is all pretty much going to be copy/paste so it’ll be fairly difficult to screw this up :)
+
+##### Make directory for the repo binary
+
+      $ mkdir ~/bin
+
+##### Add directory for the repo binary to its path
+
+      $ PATH=~/bin:$PATH
+
+##### Downloading repo binary and placing it in the proper directory
+
+      $ curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+
+##### Giving the repo binary the proper permissions
+
+      $ chmod a+x ~/bin/repo
+
+To initialize your local repository using the ColtOS trees, use a 
+command like this:
+
+```bash
+  repo init -u git://github.com/Colt-Enigma/platform_manifest.git -b cos9
+```
+  
+Then to sync up:
+----------------
+
+```bash
+repo sync --no-tags --no-clone-bundle --force-sync -c
+```
+Finally to build:
+-----------------
+
+```bash
+  . build/envsetup.sh
+  lunch
+  Select your device
+  make otapackage
+```

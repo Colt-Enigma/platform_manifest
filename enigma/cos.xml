@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <!-- Github remote -->
+    <remote name="github"
+        fetch="https://github.com/" />
+
+    <!-- general -->
+    <project path="build/make" name="platform_build_make" remote="colt" revision="cos9" >
+        <copyfile src="core/root.mk" dest="Makefile" />
+        <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+        <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+        <linkfile src="core" dest="build/core" />
+        <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+        <linkfile src="target" dest="build/target" />
+        <linkfile src="tools" dest="build/tools" />
+    </project>
+
+    <project path="build/soong" name="platform_build_soong" remote="colt" revision="cos9" >
+        <linkfile src="root.bp" dest="Android.bp" />
+        <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+    </project>
+
+    <project path="bionic" name="platform_bionic" remote="colt" revision="cos9"/>
+
+    <project path="bootable/recovery" name="platform_bootable_recovery" remote="colt" revision="cos9" />
+
+    <!-- external -->
+    <project path="external/tinycompress" name="platform_external_tinycompress" remote="colt" revision="cos9" />
+
+    <!-- system -->
+    <project path="system/bt" name="platform_system_bt" remote="colt" revision="cos9" />
+    <project path="system/core" name="platform_system_core" remote="colt" revision="cos9" />
+    <project path="system/extras" name="platform_system_extras" remote="colt" revision="cos9" />
+
+    <!-- frameworks -->
+    <project path="frameworks/av" name="platform_frameworks_av" remote="colt" revision="cos9" />
+    <project path="frameworks/base" name="platform_frameworks_base" remote="colt" revision="cos9" />
+    <project path="frameworks/compile/mclinker" name="platform_frameworks_compile_mclinker" remote="colt" revision="cos9" />
+    <project path="frameworks/opt/net/wifi" name="platform_frameworks_opt_net_wifi" remote="colt" revision="cos9" />
+    <project path="frameworks/opt/telephony" name="platform_frameworks_opt_telephony" remote="colt" revision="cos9" />
+    <project path="frameworks/native" name="platform_frameworks_native" remote="colt" revision="cos9" />
+
+    <!-- packages -->
+    <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="colt" revision="cos9" />
+    <project path="packages/inputmethods/LatinIME" name="platform_packages_inputmethods_LatinIME" remote="colt" revision="cos9" />
+    <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="colt" revision="cos9" />
+    <project path="packages/apps/Dialer" name="platform_packages_apps_Dialer" remote="colt" revision="cos9" />
+
+    <!-- prebuilts -->
+    <project path="prebuilts/build-tools" name="platform_prebuilts_build-tools" remote="colt" revision="cos9" />
+
+    <!-- services -->
+    <project path="packages/services/Telephony" name="platform_packages_services_Telephony" remote="colt" revision="cos9" />
+    <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" remote="colt" revision="cos9" />
+
+</manifest>
