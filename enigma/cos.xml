@@ -53,5 +53,8 @@
     <!-- services -->
     <project path="packages/services/Telephony" name="platform_packages_services_Telephony" remote="colt" revision="cos9" />
     <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" remote="colt" revision="cos9" />
-
+    
+    <!-- ipacmgr -->
+    <project path="hardware/qcom/data/ipacfg-mgr" name="platform_hardware_qcom_data_ipacfg-mgr" remote="colt" revision="cos9" />
+    
 </manifest>
