@@ -1,60 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-    <!-- Github remote -->
-    <remote name="github"
-        fetch="https://github.com/" />
+<!-- general -->
+  <project path="manifest" name="platform_manifest" remote="colt" />
+  <project path="art" name="platform_art" groups="pdk" remote="colt" />
+  <project path="bionic" name="platform_bionic" groups="pdk" remote="colt" />
+  <project path="bootable/recovery" name="platform_bootable_recovery" groups="pdk" remote="colt" />
+  <project path="build/make" name="platform_build_make" groups="pdk" remote="colt" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="platform_build_soong" groups="pdk,tradefed" remote="colt" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
 
-    <!-- general -->
-    <project path="build/make" name="platform_build_make" remote="colt" revision="cos9" >
-        <copyfile src="core/root.mk" dest="Makefile" />
-        <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
-        <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
-        <linkfile src="core" dest="build/core" />
-        <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
-        <linkfile src="target" dest="build/target" />
-        <linkfile src="tools" dest="build/tools" />
-    </project>
+  <!-- frameworks -->
+  <project path="frameworks/compile/mclinker" name="platform_frameworks_compile_mclinker" groups="pdk,tradefed" remote="colt" />
+  <project path="frameworks/opt/telephony" name="platform_frameworks_opt_telephony" groups="pdk" remote="colt" />
+  <project path="frameworks/av" name="platform_frameworks_av" groups="pdk" remote="colt" />
+  <project path="frameworks/base" name="platform_frameworks_base" remote="colt" revision="cos9" />
+  <project path="frameworks/native" name="platform_frameworks_native" groups="pdk" remote="colt" />
+  <project path="frameworks/support" name="platform_frameworks_support" groups="pdk" remote="colt" />
 
-    <project path="build/soong" name="platform_build_soong" remote="colt" revision="cos9" >
-        <linkfile src="root.bp" dest="Android.bp" />
-        <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
-    </project>
+  <!-- packages -->
+  <project path="packages/apps/Contacts" name="platform_packages_apps_Contacts" groups="pdk-fs" remote="colt" />
+  <project path="packages/apps/FMRadio" name="platform_packages_apps_FMRadio" remote="colt" />
+  <project path="packages/apps/Gallery2" name="platform_packages_apps_Gallery2" groups="pdk-fs" remote="colt" />
+  <project path="packages/apps/Stk" name="platform_packages_apps_Stk" remote="colt" />
+  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" groups="pdk-fs" remote="colt" revision="cos9" />
+  <project path="packages/inputmethods/LatinIME" name="platform_packages_inputmethods_LatinIME" groups="pdk-fs" remote="colt" />
+  <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="colt" />
+  <project path="packages/providers/MediaProvider" name="platform_packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="colt" />
+  <project path="packages/providers/DownloadProvider" name="platform_packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="colt" />
+  <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" groups="apps_nfc,pdk-fs" remote="los" />
 
-    <project path="bionic" name="platform_bionic" remote="colt" revision="cos9"/>
+  <!-- interfaces -->
+  <project path="hardware/colt/interfaces" name="platform_hardware_colt_interfaces" remote="colt" />
 
-    <project path="bootable/recovery" name="platform_bootable_recovery" remote="colt" revision="cos9" />
+  <!-- prebuilts -->
+  <project path="prebuilts/build-tools" name="platform_prebuilts_build-tools" remote="colt" />
 
-    <!-- external -->
-    <project path="external/tinycompress" name="platform_external_tinycompress" remote="colt" revision="cos9" />
+  <!-- system -->
+  <project path="system/bt" name="platform_system_bt" remote="colt" />
+  <project path="system/qcom" name="platform_system_qcom" groups="pdk" remote="colt" />
+  <project path="system/core" name="platform_system_core" groups="pdk" remote="colt" />
+  <project path="system/extras" name="platform_system_extras" groups="pdk" remote="colt" />
+  <project path="system/sepolicy" name="platform_system_sepolicy" groups="pdk" remote="colt" />
 
-    <!-- system -->
-    <project path="system/bt" name="platform_system_bt" remote="colt" revision="cos9" />
-    <project path="system/core" name="platform_system_core" remote="colt" revision="cos9" />
-    <project path="system/extras" name="platform_system_extras" remote="colt" revision="cos9" />
+  <!-- Ant Wireless -->
+  <project path="external/ant-wireless/ant_native" name="android_external_ant-wireless_ant_native" remote="los" />
+  <project path="external/ant-wireless/ant_service" name="android_external_ant-wireless_ant_service" remote="los" />
+  <project path="external/ant-wireless/antradio-library" name="android_external_ant-wireless_antradio-library" remote="los" />
 
-    <!-- frameworks -->
-    <project path="frameworks/av" name="platform_frameworks_av" remote="colt" revision="cos9" />
-    <project path="frameworks/base" name="platform_frameworks_base" remote="colt" revision="cos9" />
-    <project path="frameworks/compile/mclinker" name="platform_frameworks_compile_mclinker" remote="colt" revision="cos9" />
-    <project path="frameworks/opt/net/wifi" name="platform_frameworks_opt_net_wifi" remote="colt" revision="cos9" />
-    <project path="frameworks/opt/telephony" name="platform_frameworks_opt_telephony" remote="colt" revision="cos9" />
-    <project path="frameworks/native" name="platform_frameworks_native" remote="colt" revision="cos9" />
+  <!-- Device -->
+  <project path="device/qcom/common" name="android_device_qcom_common" remote="los" revision="lineage-15.1" />
 
-    <!-- packages -->
-    <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="colt" revision="cos9" />
-    <project path="packages/inputmethods/LatinIME" name="platform_packages_inputmethods_LatinIME" remote="colt" revision="cos9" />
-    <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="colt" revision="cos9" />
-    <project path="packages/apps/Dialer" name="platform_packages_apps_Dialer" remote="colt" revision="cos9" />
+  <!-- External -->
+  <project path="external/bash" name="android_external_bash" remote="los" />
+  <project path="external/connectivity" name="android_external_connectivity" groups="pdk" remote="los" />
+  <project path="external/exfat" name="android_external_exfat" remote="los" />
+  <project path="external/htop" name="android_external_htop" remote="los" />
+  <project path="external/json-c" name="android_external_json-c" remote="los" />
+  <project path="external/libncurses" name="android_external_libncurses" remote="los" />
+  <project path="external/libnfc-nxp" name="android_external_libnfc-nxp" remote="los" />
+  <project path="external/libtar" name="android_external_libtar" remote="los" revision="lineage-15.1" />
+  <project path="external/mksh" name="android_external_mksh" groups="pdk" remote="los" />
+  <project path="external/nano" name="android_external_nano" remote="los" />
+  <project path="external/openssh" name="android_external_openssh" remote="los" />
+  <project path="external/ntfs-3g" name="android_external_ntfs-3g" remote="los" />
+  <project path="external/perfetto" name="platform_external_perfetto" remote="colt" />
+  <project path="external/p7zip" name="android_external_p7zip" remote="los" />
+  <project path="external/pigz" name="android_external_pigz" remote="los" />
+  <project path="external/rsync" name="android_external_rsync" remote="los" />
+  <project path="external/unrar" name="android_external_unrar" remote="los" />
+  <project path="external/vim" name="android_external_vim" remote="los" />
+  <project path="external/zip" name="android_external_zip" remote="los" />
+  <project path="external/tinycompress" name="android_external_tinycompress" groups="pdk" remote="los" />
+  <project path="external/selinux" name="android_external_selinux" groups="pdk" remote="los" />
+  <project path="external/toybox" name="android_external_toybox" groups="pdk" remote="los" />
 
-    <!-- prebuilts -->
-    <project path="prebuilts/build-tools" name="platform_prebuilts_build-tools" remote="colt" revision="cos9" />
+  <!-- hardware -->
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="los" />
+  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" groups="pdk" remote="los" />
+  <project path="hardware/interfaces" name="android_hardware_interfaces" groups="pdk" remote="los" />
 
-    <!-- services -->
-    <project path="packages/services/Telephony" name="platform_packages_services_Telephony" remote="colt" revision="cos9" />
-    <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" remote="colt" revision="cos9" />
-    
-    <!-- ipacmgr -->
-    <project path="hardware/qcom/data/ipacfg-mgr" name="platform_hardware_qcom_data_ipacfg-mgr" remote="colt" revision="cos9" />
-    
 </manifest>

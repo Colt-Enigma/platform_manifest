@@ -2,12 +2,13 @@
 <manifest>
 
   <remote  name="aosp"
-	   fetch="https://android.googlesource.com"
+           fetch="https://android.googlesource.com/"
            review="https://android-review.googlesource.com/" />
-  <default revision="refs/tags/android-9.0.0_r3"
-           sync-c="true"
-	   remote="aosp"
-           sync-j="4" />
+
+  <default revision="refs/tags/android-9.0.0_r10"
+           remote="aosp"
+           sync-j="4" 
+           sync-c="true" />
 
   <project path="build/make" name="platform/build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -702,4 +703,6 @@
   <!-- ColtOS Manifest -->
   <include name="enigma/colt.xml" />
 
+
 </manifest>
+

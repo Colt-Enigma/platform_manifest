@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote  name="github"
+           fetch="https://github.com/" />
+
   <remote  name="colt"
            fetch="https://github.com/Colt-Enigma"
-           revision="refs/heads/cos9" />
+           revision="refs/heads/c9" />
+
+  <remote  name="los"
+           fetch="https://github.com/LineageOS"
+           revision="refs/heads/lineage-16.0" />
 		  
   <!-- FIRST: Remove unused/forked AOSP Projects -->
   <include name="enigma/remove.xml" />

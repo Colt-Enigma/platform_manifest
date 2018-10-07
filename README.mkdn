@@ -44,7 +44,7 @@ To initialize your local repository using the ColtOS trees, use a
 command like this:
 
 ```bash
-  repo init -u git://github.com/Colt-Enigma/platform_manifest.git -b cos9
+  repo init -u git://github.com/Colt-Enigma/platform_manifest.git -b c9
 ```
   
 Then to sync up:
@@ -60,5 +60,5 @@ Finally to build:
   . build/envsetup.sh
   lunch
   Select your device
-  make otapackage
+  make colt
 ```
