@@ -2,7 +2,7 @@
 <manifest>
 
 <!-- vendor -->
-  <project path="vendor/colt" name="platform_vendor_colt" remote="colt" revision="sdb" />
+  <project path="vendor/colt" name="platform_vendor_colt" remote="colt" revision="c9" />
   <project path="vendor/codeaurora/telephony" name="platform_vendor_codeaurora_telephony" remote="colt" />
   <project path="vendor/nxp/opensource/interfaces/nfc" name="android_vendor_nxp_interfaces_opensource_nfc" remote="los" />
   <project path="vendor/nxp/opensource/commonsys/external/libnfc-nci" name="android_vendor_nxp_opensource_external_libnfc-nci" remote="los" />

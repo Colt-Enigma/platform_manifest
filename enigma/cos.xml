@@ -27,6 +27,7 @@
   <project path="frameworks/base" name="platform_frameworks_base" remote="colt" revision="cos9" />
   <project path="frameworks/native" name="platform_frameworks_native" groups="pdk" remote="colt" />
   <project path="frameworks/support" name="platform_frameworks_support" groups="pdk" remote="colt" />
+  <project path="frameworks/opt/net/ims" name="platform_frameworks_opt_net_ims" groups="pdk" remote="colt" />
 
   <!-- packages -->
   <project path="packages/apps/Contacts" name="platform_packages_apps_Contacts" groups="pdk-fs" remote="colt" />
@@ -36,9 +37,13 @@
   <project path="packages/apps/Settings" name="platform_packages_apps_Settings" groups="pdk-fs" remote="colt" revision="cos9" />
   <project path="packages/inputmethods/LatinIME" name="platform_packages_inputmethods_LatinIME" groups="pdk-fs" remote="colt" />
   <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="colt" />
+  <project path="packages/services/Telephony" name="platform_packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="colt" />
   <project path="packages/providers/MediaProvider" name="platform_packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="colt" />
   <project path="packages/providers/DownloadProvider" name="platform_packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="colt" />
   <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" groups="apps_nfc,pdk-fs" remote="los" />
+  <project path="packages/apps/ColtCenter" name="platform_packages_apps_ColtCenter" groups="pdk-fs" remote="colt" />
+  <project path="packages/apps/OmniStyle" name="platform_packages_apps_OmniStyle" remote="colt" />
+  <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" groups="pdk-fs" remote="colt" />
 
   <!-- interfaces -->
   <project path="hardware/colt/interfaces" name="platform_hardware_colt_interfaces" remote="colt" />
@@ -52,6 +57,7 @@
   <project path="system/core" name="platform_system_core" groups="pdk" remote="colt" />
   <project path="system/extras" name="platform_system_extras" groups="pdk" remote="colt" />
   <project path="system/sepolicy" name="platform_system_sepolicy" groups="pdk" remote="colt" />
+  <project path="system/vold" name="platform_system_vold" groups="pdk" remote="colt" />
 
   <!-- Ant Wireless -->
   <project path="external/ant-wireless/ant_native" name="android_external_ant-wireless_ant_native" remote="los" />
