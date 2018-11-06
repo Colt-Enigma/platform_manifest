@@ -44,7 +44,8 @@
   <project path="packages/apps/ColtCenter" name="platform_packages_apps_ColtCenter" groups="pdk-fs" remote="colt" />
   <project path="packages/apps/OmniStyle" name="platform_packages_apps_OmniStyle" remote="colt" />
   <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" groups="pdk-fs" remote="colt" />
-
+  <project path="packages/apps/Bluetooth" name="platform_packages_apps_Bluetooth" groups="pdk-fs" remote="colt" />
+  
   <!-- interfaces -->
   <project path="hardware/colt/interfaces" name="platform_hardware_colt_interfaces" remote="colt" />
 
