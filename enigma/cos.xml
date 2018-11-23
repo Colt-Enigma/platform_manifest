@@ -48,6 +48,8 @@
   <project path="packages/apps/Bluetooth" name="platform_packages_apps_Bluetooth" groups="pdk-fs" remote="colt" />
   <project path="packages/apps/Snap" name="platform_packages_apps_Snap" remote="colt" />  
   <project path="packages/apps/Dialer" name="platform_packages_apps_Dialer" remote="colt" />
+  <project path="packages/apps/WeatherClient" name="platform_packages_apps_WeatherClient" remote="colt" revision="cos9" />
+  <project path="packages/apps/DocumentsUI" name="platform_packages_apps_DocumentsUI" remote="colt" />
 
   <!-- interfaces -->
   <project path="hardware/colt/interfaces" name="platform_hardware_colt_interfaces" remote="colt" />
