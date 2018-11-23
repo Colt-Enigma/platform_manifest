@@ -57,6 +57,15 @@ Finally to build:
 -----------------
 
 ```bash
+  First You need to add the following lines in your Device Tree's colt_devicename.mk file
+
+  TARGET_BOOT_ANIMATION_RES := 1080x1920 : Please change as per your device resolution
+
+  # Inherit some common Colt stuff.
+  $(call inherit-product, vendor/colt/common.mk)
+
+and use the following to build:
+
   . build/envsetup.sh
   lunch
   Select your device
