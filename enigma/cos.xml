@@ -28,6 +28,7 @@
   <project path="frameworks/native" name="platform_frameworks_native" groups="pdk" remote="colt" />
   <project path="frameworks/support" name="platform_frameworks_support" groups="pdk" remote="colt" />
   <project path="frameworks/opt/net/ims" name="platform_frameworks_opt_net_ims" groups="pdk" remote="colt" />
+  <project path="frameworks/opt/jamesdsp" name="platform_frameworks_opt_jamesdsp" remote="colt" />
 
   <!-- packages -->
   <project path="packages/apps/Contacts" name="platform_packages_apps_Contacts" groups="pdk-fs" remote="colt" />
@@ -52,6 +53,8 @@
   <project path="packages/apps/DocumentsUI" name="platform_packages_apps_DocumentsUI" remote="colt" />
   <project path="packages/apps/ColtWallpapers" name="platform_packages_apps_ColtWallpapers" remote="colt" />
   <project path="packages/apps/Recorder" name="platform_packages_apps_Recorder" remote="colt" />
+  <project path="packages/apps/Eleven" name="platform_packages_apps_Eleven" remote="colt" />
+  <project path="packages/apps/MusicFX" name="platform_packages_apps_MusicFX" remote="colt" />
 
   <!-- interfaces -->
   <project path="hardware/colt/interfaces" name="platform_hardware_colt_interfaces" remote="colt" />
