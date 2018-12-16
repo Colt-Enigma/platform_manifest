@@ -51,6 +51,7 @@
   <project path="packages/apps/WeatherClient" name="platform_packages_apps_WeatherClient" remote="colt" revision="cos9" />
   <project path="packages/apps/DocumentsUI" name="platform_packages_apps_DocumentsUI" remote="colt" />
   <project path="packages/apps/ColtWallpapers" name="platform_packages_apps_ColtWallpapers" remote="colt" />
+  <project path="packages/apps/Recorder" name="platform_packages_apps_Recorder" remote="colt" />
 
   <!-- interfaces -->
   <project path="hardware/colt/interfaces" name="platform_hardware_colt_interfaces" remote="colt" />
