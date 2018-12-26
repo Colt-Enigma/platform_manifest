@@ -55,12 +55,17 @@
   <project path="packages/apps/Recorder" name="platform_packages_apps_Recorder" remote="colt" />
   <project path="packages/apps/Eleven" name="platform_packages_apps_Eleven" remote="colt" />
   <project path="packages/apps/MusicFX" name="platform_packages_apps_MusicFX" remote="colt" />
+  <project path="packages/apps/DeskClock" name="platform_packages_apps_DeskClock" remote="colt" />
+  <project path="libcore" name="platform_libcore" remote="colt" />
 
   <!-- interfaces -->
   <project path="hardware/colt/interfaces" name="platform_hardware_colt_interfaces" remote="colt" />
 
   <!-- prebuilts -->
   <project path="prebuilts/build-tools" name="platform_prebuilts_build-tools" remote="colt" />
+  <project path="prebuilts/clang/host/linux-x86" name="platform_prebuilts_clang_host_linux-x86" remote="colt" />
+  <project path="prebuilts/go/linux-x86" name="platform_prebuilts_go_linux-x86" remote="colt" />
+  <project path="prebuilts/r8" name="platform_prebuilts_r8" remote="colt" />
 
   <!-- system -->
   <project path="system/bt" name="platform_system_bt" remote="colt" />
@@ -101,6 +106,14 @@
   <project path="external/tinycompress" name="platform_external_tinycompress" groups="pdk" remote="colt" />
   <project path="external/selinux" name="android_external_selinux" groups="pdk" remote="los" />
   <project path="external/toybox" name="android_external_toybox" groups="pdk" remote="los" />
+  <project path="external/turbine" name="platform_external_turbine" remote="colt" />
+  <project path="external/freetype" name="platform_external_freetype" remote="colt" />
+  <project path="external/zlib" name="platform_external_zlib" remote="colt" />
+  <project path="external/libjpeg-turbo" name="platform_external_libjpeg-turbo" remote="colt" />
+  <project path="external/arm-optimized-routines" name="platform_external_arm-optimized-routines" remote="colt" />
+  <project path="external/vixl" name="platform_external_vixl" remote="colt" />
+  <project path="external/skia" name="platform_external_skia" remote="colt" />
+  <project path="external/skqp" name="platform_external_skqp" remote="colt" />	
 
   <!-- hardware -->
   <project path="hardware/libhardware" name="android_hardware_libhardware" remote="los" />
