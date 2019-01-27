@@ -87,7 +87,10 @@
 
   <!-- Device -->
   <project path="device/qcom/common" name="android_device_qcom_common" remote="los" revision="lineage-15.1" />
-
+  <project path="device/colt/sepolicy" name="platform_device_colt_sepolicy" remote="colt" />
+  <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="colt" />
+  <project path="device/qcom/sepolicy-legacy" name="platform_device_qcom_sepolicy-legacy" remote="colt" />
+  
   <!-- External -->
   <project path="external/bash" name="android_external_bash" remote="los" />
   <project path="external/connectivity" name="android_external_connectivity" groups="pdk" remote="los" />
