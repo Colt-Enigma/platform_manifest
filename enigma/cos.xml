@@ -31,6 +31,7 @@
   <project path="frameworks/opt/jamesdsp" name="platform_frameworks_opt_jamesdsp" remote="colt" />
 
   <!-- packages -->
+  <project path="packages/apps/CustomDoze" name="platform_packages_apps_CustomDoze" remote="colt" />
   <project path="packages/apps/Contacts" name="platform_packages_apps_Contacts" groups="pdk-fs" remote="colt" />
   <project path="packages/apps/Messaging" name="platform_packages_apps_Messaging" remote="colt" />
   <project path="packages/apps/FMRadio" name="platform_packages_apps_FMRadio" remote="colt" />
