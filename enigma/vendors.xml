@@ -19,5 +19,6 @@
   </project>
   <project path="vendor/qcom/opensource/rcs-service" name="android_vendor_qcom_opensource_rcs-service" remote="los" revision="lineage-15.1" />
 
+  <project path="vendor/support" name="platform_vendor_support" remote="colt" revision="c9" />
 
 </manifest>
