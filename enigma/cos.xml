@@ -128,6 +128,7 @@
   <project path="external/vixl" name="platform_external_vixl" remote="colt" />
   <project path="external/skia" name="platform_external_skia" remote="colt" />
   <project path="external/skqp" name="platform_external_skqp" remote="colt" />	
+  <project path="external/google" name="platform_external_google" remote="colt" />
 
   <!-- hardware -->
   <project path="hardware/libhardware" name="android_hardware_libhardware" remote="los" />
