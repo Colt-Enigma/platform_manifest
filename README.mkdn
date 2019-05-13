@@ -64,6 +64,9 @@ Finally to build:
   # Inherit some common Colt stuff.
   $(call inherit-product, vendor/colt/common.mk)
 
+  For Colt's Prebuilt apk please add the following
+  $(call inherit-product, packages/apps/ColtApps/common.mk)
+ 
 and use the following to build:
 
   . build/envsetup.sh
