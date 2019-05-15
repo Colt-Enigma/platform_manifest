@@ -21,4 +21,5 @@
 
   <project path="vendor/support" name="platform_vendor_support" remote="colt" revision="c9" />
 
+  <project path="vendor/interfaces" name="platform_vendor_interfaces" remote="colt" revision="c9" />
 </manifest>

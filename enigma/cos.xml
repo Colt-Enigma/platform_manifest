@@ -135,5 +135,6 @@
   <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" groups="pdk" remote="los" />
   <project path="hardware/interfaces" name="platform_hardware_interfaces" groups="pdk" remote="colt" />
   <project path="hardware/colt/telephony" name="platform_hardware_colt_telephony" remote="colt" />
+  <project path="hardware/lineage/livedisplay" name="android_hardware_lineage_livedisplay" remote="los" />
 
 </manifest>
