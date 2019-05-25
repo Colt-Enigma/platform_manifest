@@ -36,7 +36,6 @@
   <project path="packages/apps/CustomDoze" name="platform_packages_apps_CustomDoze" remote="colt" />
   <project path="packages/apps/Contacts" name="platform_packages_apps_Contacts" groups="pdk-fs" remote="colt" />
   <project path="packages/apps/Messaging" name="platform_packages_apps_Messaging" remote="colt" />
-  <project path="packages/apps/FMRadio" name="platform_packages_apps_FMRadio" remote="colt" />
   <project path="packages/apps/Gallery2" name="platform_packages_apps_Gallery2" groups="pdk-fs" remote="colt" />
   <project path="packages/apps/Stk" name="platform_packages_apps_Stk" remote="colt" />
   <project path="packages/apps/Settings" name="platform_packages_apps_Settings" groups="pdk-fs" remote="colt" revision="cos9" />
@@ -137,4 +136,8 @@
   <project path="hardware/colt/telephony" name="platform_hardware_colt_telephony" remote="colt" />
   <project path="hardware/lineage/livedisplay" name="android_hardware_lineage_livedisplay" remote="los" />
 
+  <!-- fm repos -->
+  <project path="hardware/qcom/fm" name="android_hardware_qcom_fm" remote="los" />
+  <project path="packages/apps/FMRadio" name="android_packages_apps_FMRadio" remote="los" />
+  
 </manifest>
