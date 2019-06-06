@@ -30,6 +30,7 @@
   <project path="frameworks/native" name="platform_frameworks_native" groups="pdk" remote="colt" />
   <project path="frameworks/support" name="platform_frameworks_support" groups="pdk" remote="colt" />
   <project path="frameworks/opt/net/ims" name="platform_frameworks_opt_net_ims" groups="pdk" remote="colt" />
+  <project path="frameworks/opt/net/wifi" name="platform_frameworks_opt_net_wifi" groups="pdk" remote="colt" />
   <project path="frameworks/opt/jamesdsp" name="platform_frameworks_opt_jamesdsp" remote="colt" />
 
   <!-- packages -->
