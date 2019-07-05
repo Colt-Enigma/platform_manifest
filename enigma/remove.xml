@@ -94,6 +94,11 @@
   <remove-project name="platform/hardware/qcom/bootctrl" />
   <remove-project name="platform/hardware/nxp/nfc" />
   <remove-project name="platform/external/mksh" />
+  <remove-project name="platform/external/e2fsprogs" />
+  <remove-project name="platform/external/f2fs-tools" />
+  <remove-project name="platform/external/fsck_msdos" />
+  <remove-project name="platform/external/gptfdisk" />
+  <remove-project name="platform/external/one-true-awk" />
   <remove-project name="platform/external/perfetto" />
   <remove-project name="platform/external/tinycompress" />
   <remove-project name="platform/external/selinux" />
