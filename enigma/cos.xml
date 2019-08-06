@@ -2,12 +2,13 @@
 <manifest>
 
 <!-- general -->
-  <project path="manifest" name="platform_manifest" remote="colt" />
-  <project path="art" name="platform_art" groups="pdk" remote="colt" />
-  <project path="bionic" name="platform_bionic" groups="pdk" remote="colt" />
+  <project path="manifest" name="platform_manifest" remote="colt" revision="wip" />
+  <project path="art" name="platform_art" groups="pdk" remote="colt" revision="wip" />
+  <project path="bionic" name="platform_bionic" groups="pdk" remote="colt" revision="wip" />
   <project path="bootable/recovery" name="platform_bootable_recovery" groups="pdk" remote="colt" />
   <project path="build/blueprint" name="platform_build_blueprint" groups="pdk" remote="colt" />
-  <project path="build/make" name="platform_build_make" groups="pdk" remote="colt" >
+  <project path="build/kati" name="platform_build_kati" remote="colt" revision="wip" />
+  <project path="build/make" name="platform_build_make" groups="pdk" remote="colt" revision="wip" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -16,7 +17,7 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="platform_build_soong" groups="pdk,tradefed" remote="colt" >
+  <project path="build/soong" name="platform_build_soong" groups="pdk,tradefed" remote="colt" revision="wip" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
@@ -63,7 +64,6 @@
   <project path="packages/apps/DeskClock" name="platform_packages_apps_DeskClock" remote="colt" />
   <project path="packages/apps/SmartNav" name="platform_packages_apps_SmartNav" remote="colt" />
   <project path="packages/apps/SmartNavSettings" name="platform_packages_apps_SmartNavSettings" remote="colt" />
-  <project path="libcore" name="platform_libcore" remote="colt" />
 
   <!-- ota -->
   <project path="packages/apps/Updates" name="platform_packages_apps_Updates" remote="colt" />
@@ -73,7 +73,7 @@
   <project path="hardware/colt/interfaces" name="platform_hardware_colt_interfaces" remote="colt" />
 
   <!-- prebuilts -->
-  <project path="prebuilts/build-tools" name="platform_prebuilts_build-tools" remote="colt" />
+  <project path="prebuilts/build-tools" name="platform_prebuilts_build-tools" remote="colt" revision="wip" />
   <project path="prebuilts/clang/host/linux-x86" name="platform_prebuilts_clang_host_linux-x86" remote="colt" />
   <project path="prebuilts/go/linux-x86" name="platform_prebuilts_go_linux-x86" remote="colt" />
   <project path="prebuilts/r8" name="platform_prebuilts_r8" remote="colt" />
@@ -84,7 +84,10 @@
   <project path="system/core" name="platform_system_core" groups="pdk" remote="colt" />
   <project path="system/extras" name="platform_system_extras" groups="pdk" remote="colt" />
   <project path="system/sepolicy" name="platform_system_sepolicy" groups="pdk" remote="colt" />
-  <project path="system/vold" name="platform_system_vold" groups="pdk" remote="colt" />
+  <project path="system/vold" name="platform_system_vold" groups="pdk" remote="colt" revision="wip" />
+  <project path="system/netd" name="platform_system_netd" groups="pdk" remote="colt" revision="wip" />
+  <project path="system/libhwbinder" name="platform_system_libhwbinder" remote="colt" revision="wip" />
+  <project path="system/tools/hidl" name="platform_system_tools_hidl" remote="colt" revision="wip" />
 
   <!-- Ant Wireless -->
   <project path="external/ant-wireless/ant_native" name="android_external_ant-wireless_ant_native" remote="los" />
@@ -93,14 +96,15 @@
 
   <!-- Device -->
   <project path="device/qcom/common" name="android_device_qcom_common" remote="los" revision="lineage-15.1" />
-  <project path="device/colt/sepolicy" name="platform_device_colt_sepolicy" remote="colt" />
-  <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="colt" />
+  <project path="device/colt/sepolicy" name="platform_device_colt_sepolicy" remote="colt" revision="wip" />
+  <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="colt" revision="wip" />
   <project path="device/qcom/sepolicy-legacy" name="platform_device_qcom_sepolicy-legacy" remote="colt" />
   
   <!-- External -->
   <project path="external/bash" name="android_external_bash" remote="los" />
   <project path="external/connectivity" name="android_external_connectivity" groups="pdk" remote="los" />
   <project path="external/exfat" name="android_external_exfat" remote="los" />
+  <project path="external/expat" name="platform_external_exfat" remote="colt" revision="wip" />
   <project path="external/htop" name="android_external_htop" remote="los" />
   <project path="external/json-c" name="android_external_json-c" remote="los" />
   <project path="external/libncurses" name="android_external_libncurses" remote="los" />
@@ -109,14 +113,14 @@
   <project path="external/nano" name="android_external_nano" remote="los" />
   <project path="external/openssh" name="android_external_openssh" remote="los" />
   <project path="external/ntfs-3g" name="android_external_ntfs-3g" remote="los" />
-  <project path="external/perfetto" name="platform_external_perfetto" remote="colt" />
+  <project path="external/perfetto" name="platform_external_perfetto" remote="colt" revision="wip" />
   <project path="external/p7zip" name="android_external_p7zip" remote="los" />
   <project path="external/pigz" name="android_external_pigz" remote="los" />
   <project path="external/rsync" name="android_external_rsync" remote="los" />
   <project path="external/unrar" name="android_external_unrar" remote="los" />
   <project path="external/vim" name="android_external_vim" remote="los" />
   <project path="external/zip" name="android_external_zip" remote="los" />
-  <project path="external/tinycompress" name="platform_external_tinycompress" groups="pdk" remote="colt" />
+  <project path="external/tinycompress" name="android_external_tinycompress" groups="pdk" remote="los" />
   <project path="external/selinux" name="android_external_selinux" groups="pdk" remote="los" />
   <project path="external/toybox" name="android_external_toybox" groups="pdk" remote="los" />
   <project path="external/turbine" name="platform_external_turbine" remote="colt" />
@@ -124,7 +128,7 @@
   <project path="external/zlib" name="platform_external_zlib" remote="colt" />
   <project path="external/libjpeg-turbo" name="platform_external_libjpeg-turbo" remote="colt" />
   <project path="external/arm-optimized-routines" name="platform_external_arm-optimized-routines" remote="colt" />
-  <project path="external/vixl" name="platform_external_vixl" remote="colt" />
+  <project path="external/vixl" name="platform_external_vixl" remote="colt" revision="wip" />
   <project path="external/skia" name="platform_external_skia" remote="colt" />
   <project path="external/skqp" name="platform_external_skqp" remote="colt" />	
   <project path="external/google" name="platform_external_google" remote="colt" />
@@ -134,6 +138,7 @@
   <project path="external/gptfdisk" name="android_external_gptfdisk" remote="los" />
   <project path="external/libtar" name="android_external_libtar" remote="los" />
   <project path="external/fsck_msdos" name="android_external_fsck_msdos" remote="los" />
+  <project path="external/sqlite" name="platform_external_sqlite" remote="colt" revision="wip" />
 
   <!-- hardware -->
   <project path="hardware/libhardware" name="android_hardware_libhardware" remote="los" />

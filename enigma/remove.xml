@@ -126,12 +126,16 @@
   <remove-project name="platform/system/update_engine" />
   <remove-project name="platform/system/security" />
   <remove-project name="platform/system/sepolicy" />
+  <remove-project name="platform/system/libhwbinder" />
+  <remove-project name="platform/system/tools/hidl" />
+  <remove-project name="platform/system/netd" />
   <remove-project name="platform/art" />
   <remove-project name="platform/bionic" />
   <remove-project name="platform/bootable/recovery" />
   <remove-project name="platform/build" />
   <remove-project name="platform/build/soong" />
   <remove-project name="platform/build/blueprint" />
+  <remove-project name="platform/build/kati" />
 
   <!-- Remove More Dependancy -->
   <remove-project name="platform/external/vixl" />
@@ -141,8 +145,9 @@
   <remove-project name="platform/prebuilts/r8" />
   <remove-project name="platform/external/zlib" />
   <remove-project name="platform/external/libjpeg-turbo" />
-  <remove-project name="platform/libcore" />
   <remove-project name="platform/external/turbine" />
   <remove-project name="platform/external/freetype" />
+  <remove-project name="platform/external/expat" />
+  <remove-project name="platform/external/sqlite" />
 </manifest>
 
