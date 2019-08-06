@@ -104,7 +104,7 @@
   <project path="external/bash" name="android_external_bash" remote="los" />
   <project path="external/connectivity" name="android_external_connectivity" groups="pdk" remote="los" />
   <project path="external/exfat" name="android_external_exfat" remote="los" />
-  <project path="external/expat" name="platform_external_exfat" remote="colt" revision="wip" />
+  <project path="external/expat" name="platform_external_expat" remote="colt" revision="wip" />
   <project path="external/htop" name="android_external_htop" remote="los" />
   <project path="external/json-c" name="android_external_json-c" remote="los" />
   <project path="external/libncurses" name="android_external_libncurses" remote="los" />
