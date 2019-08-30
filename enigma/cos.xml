@@ -66,6 +66,7 @@
   <project path="packages/apps/SmartNav" name="platform_packages_apps_SmartNav" remote="colt" />
   <project path="packages/apps/SmartNavSettings" name="platform_packages_apps_SmartNavSettings" remote="colt" />
   <project path="packages/apps/Longshot" name="platform_packages_apps_Longshot" remote="colt" />
+  <project path="packages/apps/ThermalController" name="platform_packages_apps_ThermalController" remote="colt" />
 
   <!-- ota -->
   <project path="packages/apps/Updates" name="platform_packages_apps_Updates" remote="colt" />
