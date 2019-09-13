@@ -1,4 +1,4 @@
-Colt-AOSP : Let's Get Started :)
+Colt-Android10 : Let's Get Started :)
 ===============================
 
 ![ColtOS](https://github.com/ColtAOSP/platform_manifest/blob/cos8.x/colt_logo.gif)
@@ -44,7 +44,7 @@ To initialize your local repository using the ColtOS trees, use a
 command like this:
 
 ```bash
-  repo init -u git://github.com/Colt-Enigma/platform_manifest.git -b wip
+  repo init -u git://github.com/Colt-Enigma/platform_manifest.git -b c10
 ```
   
 Then to sync up:

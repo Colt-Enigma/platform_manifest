@@ -6,11 +6,14 @@
 
   <remote  name="colt"
            fetch="https://github.com/Colt-Enigma"
-           revision="refs/heads/c9" />
+           revision="refs/heads/c10" />
 
   <remote  name="los"
            fetch="https://github.com/LineageOS"
            revision="refs/heads/lineage-16.0" />
+
+  <remote  name="nos"
+           fetch="https://github.com/nitrogen-project" />
 		  
   <!-- FIRST: Remove unused/forked AOSP Projects -->
   <include name="enigma/remove.xml" />
@@ -19,5 +22,5 @@
   <include name="enigma/cos.xml" />
   <include name="enigma/vendors.xml" />
   <include name="enigma/halsdependancy.xml" />
-
+  <include name="enigma/coltdevices.xml" />
 </manifest>
