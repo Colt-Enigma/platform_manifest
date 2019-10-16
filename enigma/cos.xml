@@ -53,6 +53,8 @@
     <project path="packages/apps/Dialer" name="platform_packages_apps_Dialer" remote="colt" revision="c10" />
     <project path="packages/apps/WallpaperPicker2" name="platform_packages_apps_WallpaperPicker2" remote="colt" revision="c10" />
     <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" remote="colt" revision="c10" />
+    <project path="packages/apps/Nfc" name="platform_packages_apps_Nfc" remote="colt" revision="c10" />
+    <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="colt" revision="c10" />
 
 <!-- qcom -->
     <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="colt" revision="c10" />
