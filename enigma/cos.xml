@@ -25,6 +25,7 @@
     <project path="frameworks/base" name="platform_frameworks_base" remote="colt" revision="c10" />
     <project path="frameworks/opt/telephony" name="platform_frameworks_opt_telephony" remote="colt" revision="c10" />
     <project path="frameworks/native" name="platform_frameworks_native" remote="colt" revision="c10" />
+    <project path="frameworks/opt/net/wifi" name="platform_frameworks_opt_net_wifi" remote="colt" revision="c10" />
 
 <!-- prebuilts -->
     <project path="prebuilts/tools-lineage" name="platform_prebuilts_tools-lineage" remote="colt" revision="c10" />
