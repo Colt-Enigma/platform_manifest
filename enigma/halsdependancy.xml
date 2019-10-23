@@ -15,6 +15,7 @@
     <project path="hardware/qcom/data/ipacfg-mgr" name="platform_hardware_qcom_data_ipacfg-mgr" remote="colt" revision="c10" />
     <project path="hardware/qcom/camera" name="platform_hardware_qcom_camera" remote="colt" revision="c10" />
     <project path="hardware/nxp/nfc" name="platform_hardware_nxp_nfc" remote="colt" revision="c10" />
+    <project path="hardware/interfaces" name="platform_hardware_interfaces" remote="colt" revision="c10" />
 
 <!-- HardWare QCOM -->
     <!-- caf -->
