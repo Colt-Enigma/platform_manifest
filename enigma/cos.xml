@@ -46,6 +46,9 @@
     <project path="external/ntfs-3g" name="platform_external_ntfs-3g" remote="colt" revision="c10" />
     <project path="external/json-c" name="platform_external_json-c" remote="colt" revision="c10" />
 
+<!-- interfaces -->
+    <project path="hardware/colt/interfaces" name="platform_hardware_colt_interfaces" remote="colt" revision="c10" />
+
 <!-- services -->
     <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" remote="colt" revision="c10" />
     <project path="packages/services/Telephony" name="platform_packages_services_Telephony" remote="colt" revision="c10" />
