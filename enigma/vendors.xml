@@ -9,4 +9,5 @@
     <project path="vendor/qcom/opensource/interfaces" name="platform_vendor_qcom_opensource_interfaces" remote="colt" revision="c10" />
     <project path="vendor/qcom/opensource/audio" name="platform_vendor_qcom_opensource_audio" remote="colt" revision="c10" />
     <project path="vendor/qcom/opensource/cryptfs_hw" name="platform_vendor_qcom_opensource_cryptfs_hw" remote="colt" revision="c10" />
+    <project path="vendor/qcom/opensource/power" name="platform_vendor_qcom_opensource_power" remote="colt" revision="c10" />
 </manifest>
