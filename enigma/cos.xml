@@ -36,6 +36,8 @@
 <!-- system -->
     <project path="system/core" name="platform_system_core" remote="colt" revision="c10" />
     <project path="system/vold" name="platform_system_vold" remote="colt" revision="c10" />
+    <project path="system/sepolicy" name="platform_system_sepolicy" remote="colt" revision="c10" />
+    <project path="system/bt" name="platform_system_bt" remote="colt" revision="c10" />
 
 <!-- external -->
     <project path="external/tinycompress" name="platform_external_tinycompress" remote="colt" revision="c10" />
@@ -66,9 +68,10 @@
     <project path="packages/apps/Nfc" name="platform_packages_apps_Nfc" remote="colt" revision="c10" />
     <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="colt" revision="c10" />
     <project path="packages/apps/Contacts" name="platform_packages_apps_Contacts" remote="colt" revision="c10" />
+    <project path="packages/inputmethods/LatinIME" name="platform_packages_inputmethods_LatinIME" remote="colt" revision="c10" />
 
 <!-- qcom -->
     <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="colt" revision="c10" />
-
-
+    <project path="device/colt/sepolicy" name="platform_device_colt_sepolicy" remote="colt" revision="c10" />
+    <project path="device/qcom/sepolicy-legacy-um" name="platform_device_qcom_sepolicy-legacy-um" remote="colt" revision="c10" />
 </manifest>
