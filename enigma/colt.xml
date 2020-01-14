@@ -10,7 +10,7 @@
 
   <remote  name="lineage"
            fetch="https://github.com/LineageOS"
-           revision="lineage-17.0" />
+           revision="lineage-17.1" />
 
   <remote  name="nos"
            fetch="https://github.com/nitrogen-project" />
