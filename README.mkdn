@@ -1,11 +1,11 @@
-Colt-Android10 : Let's Get Started :)
+Colt-Android10 : Let's get started :)
 ===============================
 
 ![ColtOS](https://github.com/ColtAOSP/platform_manifest/blob/cos8.x/colt_logo.gif)
 
 ColtOS Project
 ===============
-ColtOS Project is a team of learners and based on aosp with some customizations.
+ColtOS Project is a team of learners and based on AOSP with some customizations.
 
 ColtOS on Social Media
 ======================
@@ -24,11 +24,11 @@ How to Build?
 
 Alright, so now we’re getting there. I have outlined the basics of what we’re about to do and broke them down as I know them. This is all pretty much going to be copy/paste so it’ll be fairly difficult to screw this up :)
 
-##### Make directory for the repo binary
+##### Making directory for the repo binary
 
       $ mkdir ~/bin
 
-##### Add directory for the repo binary to its path
+##### Adding directory for the repo binary to its path
 
       $ PATH=~/bin:$PATH
 
@@ -44,33 +44,38 @@ To initialize your local repository using the ColtOS trees, use a
 command like this:
 
 ```bash
-  repo init -u git://github.com/Colt-Enigma/platform_manifest.git -b c10
+   repo init -u git://github.com/Colt-Enigma/platform_manifest.git -b c10
+```
+And, to make it sync faster, you can only sync the latest history:
+
+```bash
+   repo init --depth=1 -u git://github.com/Colt-Enigma/platform_manifest.git -b c10
 ```
   
 Then to sync up:
 ----------------
 
 ```bash
-repo sync --no-tags --no-clone-bundle --force-sync -c
+   repo sync --no-tags --no-clone-bundle --force-sync -c
 ```
 Finally to build:
 -----------------
 
 ```bash
-  First You need to add the following lines in your Device Tree's colt_devicename.mk file
+  First You need to add the following lines in your device tree's colt_devicename.mk file:
 
-  TARGET_BOOT_ANIMATION_RES := 1080x1920 : Please change as per your device resolution
+  TARGET_BOOT_ANIMATION_RES := 1080x1920 – Please change as per your device resolution
 
-  # Inherit some common Colt stuff.
-  $(call inherit-product, vendor/colt/common.mk)
+  # Inherit some common Colt stuff
+  $(call inherit-product, vendor/colt/config/common.mk)
 
-  For Colt's Prebuilt apk please add the following
+  For Colt's prebuilt APK please add the following:
   $(call inherit-product, packages/apps/ColtApps/common.mk)
  
 and use the following to build:
 
   . build/envsetup.sh
   lunch
-  Select your device
+  *select your device*
   make colt
 ```
