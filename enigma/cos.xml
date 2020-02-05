@@ -33,7 +33,7 @@
 <!-- prebuilts -->
     <project path="prebuilts/tools-lineage" name="platform_prebuilts_tools-lineage" remote="colt" revision="c10" />
     <project path="prebuilts/openssl" name="platform_prebuilts_openssl" remote="colt" revision="c10" />
-    <project path="prebuilts/r8" name="android_prebuilts_r8" remote="lineage" clone-depth="1" />
+    <project path="prebuilts/r8" name="platform_prebuilts_r8" remote="colt" clone-depth="1" revision="c10" />
 
 <!-- system -->
     <project path="system/core" name="platform_system_core" remote="colt" revision="c10" />
