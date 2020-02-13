@@ -31,6 +31,7 @@
     <project path="frameworks/opt/net/ims" name="platform_frameworks_opt_net_ims" remote="colt" revision="c10" />
 
 <!-- prebuilts -->
+    <project path="prebuilts/clang/host/linux-x86/clang-6170260" name="platform_prebuilts_clang_host_linux-x86_clang-6170260" remote="colt" clone-depth="1" />
     <project path="prebuilts/tools-lineage" name="platform_prebuilts_tools-lineage" remote="colt" revision="c10" />
     <project path="prebuilts/openssl" name="platform_prebuilts_openssl" remote="colt" revision="c10" />
     <project path="prebuilts/r8" name="platform_prebuilts_r8" remote="colt" clone-depth="1" revision="c10" />
