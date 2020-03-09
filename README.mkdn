@@ -62,10 +62,7 @@ Finally to build:
   TARGET_BOOT_ANIMATION_RES := 1080x1920 : Please change as per your device resolution
 
   # Inherit some common Colt stuff.
-  $(call inherit-product, vendor/colt/common.mk)
-
-  For Colt's Prebuilt apk please add the following
-  $(call inherit-product, packages/apps/ColtApps/common.mk)
+  $(call inherit-product, vendor/colt/config/common.mk)
  
 and use the following to build:
 
