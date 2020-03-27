@@ -44,6 +44,7 @@
     <project path="system/bt" name="platform_system_bt" remote="colt" revision="c10" />
     <project path="system/tools/dtbtool" name="android_system_tools_dtbtool" remote="lineage" />
     <project path="system/extras" name="platform_system_extras" remote="colt" revision="c10" />
+    <project path="system/keymaster" name="platform_system_keymaster" groups="pdk" remote="colt" revision="c10" />
 
 <!-- external -->
     <project path="external/ant-wireless/ant_native" name="android_external_ant-wireless_ant_native" remote="lineage" />
@@ -57,6 +58,7 @@
     <project path="external/ntfs-3g" name="android_external_ntfs-3g" remote="lineage" />
     <project path="external/selinux" name="android_external_selinux" remote="lineage" />
     <project path="external/tinycompress" name="platform_external_tinycompress" remote="colt" revision="c10" />
+    <project path="external/airbnb-lottie" name="platform_external_airbnb-lottie" remote="colt" revision="c10" />
 
 <!-- interfaces -->
     <project path="hardware/colt/interfaces" name="platform_hardware_colt_interfaces" remote="colt" revision="c10" />
