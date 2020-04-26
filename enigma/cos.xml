@@ -97,6 +97,7 @@
     <project path="packages/apps/ExactCalculator" name="platform_packages_apps_ExactCalculator" remote="colt" revision="c10" />
     <project path="packages/apps/OmniStyle" name="platform_packages_apps_OmniStyle" remote="colt" revision="c10" />
     <project path="packages/apps/Updater" name="platform_packages_apps_Updates" remote="colt" />    
+    <project path="packages/apps/OmniSwitch" name="platform_packages_apps_OmniSwitch" remote="colt" revision="c10" />
 
 <!-- qcom -->
     <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="colt" revision="c10" />
