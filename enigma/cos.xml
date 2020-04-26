@@ -76,6 +76,9 @@
     <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" remote="colt" revision="c10" />
     <project path="packages/services/Telephony" name="platform_packages_services_Telephony" remote="colt" revision="c10" />
     <project path="packages/services/OmniJaws" name="platform_packages_services_OmniJaws" remote="colt" revision="c10" />
+    
+<!-- Nfc for legacy device like shamu/ mako -->
+    <project path="hardware/broadcom/nfc" name="android_hardware_broadcom_nfc" remote="lineage" revision="lineage-17.1" />
 
 <!-- packages -->
     <project path="packages/apps/ColtCenter" name="platform_packages_apps_ColtCenter" remote="colt" revision="c10" />
@@ -86,7 +89,7 @@
     <project path="packages/apps/Dialer" name="platform_packages_apps_Dialer" remote="colt" revision="c10" />
     <project path="packages/apps/WallpaperPicker2" name="platform_packages_apps_WallpaperPicker2" remote="colt" revision="c10" />
     <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" remote="colt" revision="c10" />
-    <project path="packages/apps/Nfc" name="platform_packages_apps_Nfc" remote="colt" revision="c10" />
+    <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="lineage" revision="lineage-17.1" />
     <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="colt" revision="c10" />
     <project path="packages/apps/Contacts" name="platform_packages_apps_Contacts" remote="colt" revision="c10" />
     <project path="packages/inputmethods/LatinIME" name="platform_packages_inputmethods_LatinIME" remote="colt" revision="c10" />
@@ -102,6 +105,7 @@
 <!-- qcom -->
     <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="colt" revision="c10" />
     <project path="device/colt/sepolicy" name="platform_device_colt_sepolicy" remote="colt" revision="c10" />
+    <project path="device/qcom/sepolicy-legacy" name="android_device_qcom_sepolicy" remote="lineage" revision="lineage-17.1-legacy" />
     <project path="device/qcom/sepolicy-legacy-um" name="platform_device_qcom_sepolicy-legacy-um" remote="colt" revision="c10" />
 
 <!-- Device -->
