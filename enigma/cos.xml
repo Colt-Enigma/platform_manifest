@@ -22,6 +22,9 @@
     <project path="bionic" name="platform_bionic" remote="colt" revision="c10" />
     <project path="bootable/recovery" name="platform_bootable_recovery" remote="colt" revision="c10" />
 
+<!-- development -->
+    <project path="development" name="platform_development" remote="colt" revision="c10" />
+
 <!-- frameworks -->
     <project path="frameworks/av" name="platform_frameworks_av" remote="colt" revision="c10" />
     <project path="frameworks/base" name="platform_frameworks_base" remote="colt" revision="c10" />

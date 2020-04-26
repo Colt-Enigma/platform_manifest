@@ -59,6 +59,9 @@
   <remove-project name="platform/bionic" />
   <remove-project name="platform/bootable/recovery" />
 
+  <!-- development -->
+  <remove-project name="platform/development" />
+
   <!-- External repos -->
   <remove-project name="platform/external/libtextclassifier" />
   <remove-project name="platform/external/ARMComputeLibrary" />
