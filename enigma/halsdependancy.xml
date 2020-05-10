@@ -11,7 +11,6 @@
   <project path="hardware/qcom/audio" name="android_hardware_qcom_audio" remote="lineage" />
   <project path="hardware/qcom/bootctrl" name="android_hardware_qcom_bootctrl" remote="lineage" />
   <project path="hardware/qcom/bt" name="android_hardware_qcom_bt" remote="lineage" />
-  <project path="hardware/qcom/camera" name="android_hardware_qcom_camera" remote="lineage" revision="lineage-17.0" />
   <project path="hardware/qcom/data/ipacfg-mgr" name="android_hardware_qcom_data_ipacfg-mgr" remote="lineage" />
   <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="lineage" />
   <project path="hardware/qcom/gps" name="android_hardware_qcom_gps" remote="lineage" />
