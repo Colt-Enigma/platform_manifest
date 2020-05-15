@@ -60,7 +60,7 @@ Finally to build:
   TARGET_BOOT_ANIMATION_RES := 1080x1920 : Please change as per your device resolution
 
   # Inherit some common Colt stuff.
-  $(call inherit-product, vendor/colt/config/common.mk)
+  $(call inherit-product, vendor/colt/config/common_full_phone.mk)
  
   and use the following to build:
 
