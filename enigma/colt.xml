@@ -42,6 +42,7 @@
 
     <!-- External Repos -->
     <project path="external/airbnb-lottie" name="platform_external_airbnb-lottie" remote="colt" />
+    <project path="external/asus/stitchimage" name="platform_external_asus_stitchimage" remote="colt" />
     <project path="external/tinycompress" name="platform_external_tinycompress" remote="colt" />
 
     <!-- Framework Repos -->
@@ -84,7 +85,6 @@
     <project path="packages/services/Telephony" name="platform_packages_services_Telephony" remote="colt" />
     <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" remote="colt" />
     <project path="packages/services/OmniJaws" name="platform_packages_services_OmniJaws" remote="colt" />
-    <project path="external/asus/stitchimage" name="platform_external_asus_stitchimage" remote="colt" />
 
     <!--Prebuilts -->
     <project path="prebuilts/tools-colt" name="platform_prebuilts_tools-colt" remote="colt" clone-depth="1" />
@@ -98,5 +98,6 @@
 
     <!-- Vendor Repo -->
     <project path="vendor/colt" name="platform_vendor_colt" remote="colt" />
+    <project path="vendor/ColtSpares" name="platform_vendor_ColtSpares" remote="colt" />
 
 </manifest>
