@@ -51,7 +51,6 @@
     <project path="frameworks/native" name="platform_frameworks_native" remote="colt" />
     <project path="frameworks/opt/net/ims" name="platform_frameworks_opt_net_ims" remote="colt" />
     <project path="frameworks/opt/net/wifi" name="platform_frameworks_opt_net_wifi" remote="colt" />
-    <project path="frameworks/opt/slimrecent" name="platform_frameworks_opt_slimrecent" remote="colt" /> 
     <project path="frameworks/opt/telephony" name="platform_frameworks_opt_telephony" remote="colt" />
 
     <!-- Hardware Repos -->
