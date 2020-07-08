@@ -16,6 +16,7 @@
   <remove-project name="platform/build" />
   <remove-project name="platform/build/blueprint" />
   <remove-project name="platform/build/soong" />
+  <remove-project name="platform/prebuilts/build-tools" />
 
   <!--Development-->
   <remove-project name="platform/developers/build" />
@@ -78,10 +79,13 @@
 
   <!-- External -->
   <remove-project name="platform/external/ARMComputeLibrary" />
+  <remove-project name="platform/external/cldr" />
   <remove-project name="platform/external/e2fsprogs" />
   <remove-project name="platform/external/gptfdisk" />
+  <remove-project name="platform/external/icu" />
   <remove-project name="platform/external/libcxx" />
   <remove-project name="platform/external/libhevc" />
+  <remove-project name="platform/external/libtextclassifier" />
   <remove-project name="platform/external/mksh" />
   <remove-project name="platform/external/openssh" />
   <remove-project name="platform/external/ppp" />
@@ -92,6 +96,7 @@
   <remove-project name="platform/external/python/pyopenssl" />
   <remove-project name="platform/external/rapidjson" />
   <remove-project name="platform/external/selinux" />
+  <remove-project name="platform/external/skia" />
   <remove-project name="platform/external/tinyalsa" />
   <remove-project name="platform/external/tinycompress" />
   <remove-project name="platform/external/toybox" />
@@ -100,9 +105,11 @@
   <remove-project name="platform/frameworks/av" />
   <remove-project name="platform/frameworks/base" />
   <remove-project name="platform/frameworks/native" />
+  <remove-project name="platform/frameworks/opt/datetimepicker" />
   <remove-project name="platform/frameworks/opt/net/ims" />
   <remove-project name="platform/frameworks/opt/net/wifi" />
   <remove-project name="platform/frameworks/opt/telephony" />
+  <remove-project name="platform/frameworks/opt/timezonepicker" />
 
   <!-- Hardware -->
   <remove-project name="platform/hardware/broadcom/libbt" />
@@ -196,6 +203,7 @@
   <remove-project name="platform/system/keymaster" />
   <remove-project name="platform/system/netd" />
   <remove-project name="platform/system/sepolicy" />
+  <remove-project name="platform/system/timezone" />
   <remove-project name="platform/system/update_engine" />
   <remove-project name="platform/system/vold" />
 
