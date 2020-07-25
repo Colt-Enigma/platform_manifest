@@ -99,5 +99,6 @@
     <!-- Vendor Repo -->
     <project path="vendor/colt" name="platform_vendor_colt" remote="colt" />
     <project path="vendor/ColtSpares" name="platform_vendor_ColtSpares" remote="colt" />
+    <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="platform_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="colt" />
 
 </manifest>
