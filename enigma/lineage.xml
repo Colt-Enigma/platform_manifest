@@ -46,6 +46,7 @@
   <project path="external/rsync" name="android_external_rsync" remote="lineage" />
   <project path="external/selinux" name="android_external_selinux" remote="lineage" />
   <project path="external/skia" name="android_external_skia" remote="lineage" />
+  <project path="external/sonivox" name="android_external_sonivox" remote="lineage" />
   <project path="external/tinyalsa" name="android_external_tinyalsa" remote="lineage" />
   <project path="external/toybox" name="android_external_toybox" remote="lineage" />
   <project path="external/unrar" name="android_external_unrar" remote="lineage" />
