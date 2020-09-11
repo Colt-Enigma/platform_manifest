@@ -49,7 +49,7 @@ Then to sync up:
 ----------------
 
 ```bash
-repo sync --no-tags --no-clone-bundle --force-sync -c
+repo sync -c -q --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
 ```
 Finally to build:
 -----------------
