@@ -18,6 +18,7 @@
   <project path="device/generic/goldfish" name="android_device_generic_goldfish" remote="lineage" />
 
   <!-- External -->
+  <project path="external/aac" name="android_external_aac" remote="lineage" />
   <project path="external/ant-wireless/ant_native" name="android_external_ant-wireless_ant_native" remote="lineage" />
   <project path="external/ant-wireless/ant_service" name="android_external_ant-wireless_ant_service" remote="lineage" />
   <project path="external/ant-wireless/antradio-library" name="android_external_ant-wireless_antradio-library" remote="lineage" />
@@ -26,6 +27,7 @@
   <project path="external/cldr" name="android_external_cldr" remote="lineage" />
   <project path="external/connectivity" name="android_external_connectivity" remote="lineage" />
   <project path="external/exfat" name="android_external_exfat" remote="lineage" />
+  <project path="external/libexif" name="android_external_libexif" remote="lineage" />
   <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="lineage" />
   <project path="external/gptfdisk" name="android_external_gptfdisk" remote="lineage" />
   <project path="external/htop" name="android_external_htop" remote="lineage" />
@@ -151,6 +153,7 @@
   <project path="system/extras" name="android_system_extras" remote="lineage" />
   <project path="system/hardware/interfaces" name="android_system_hardware_interfaces" remote="lineage" />
   <project path="system/keymaster" name="android_system_keymaster" remote="lineage" />
+  <project path="system/nfc" name="android_system_nfc" remote="lineage" />
   <project path="system/timezone" name="android_system_timezone" remote="lineage" />
   <project path="system/tools/dtbtool" name="android_system_tools_dtbtool" remote="lineage" />
   <project path="system/update_engine" name="android_system_update_engine" remote="lineage" />
