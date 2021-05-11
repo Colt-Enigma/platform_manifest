@@ -2,7 +2,7 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
   <default revision="refs/tags/android-11.0.0_r37"
            remote="aosp"
@@ -831,4 +831,10 @@
 
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
 
+  <!-- Remove unused AOSP repos -->
+  <include name="enigma/remove.xml" />
+
+  <!-- Colt additions -->
+  <include name="enigma/colt.xml" />
+  <include name="enigma/lineage.xml" />
 </manifest>
