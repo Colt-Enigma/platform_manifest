@@ -7,6 +7,10 @@
   <remote  name="gitlab"
            fetch="https://gitlab.com" />
 
+  <remote  name="pixel-gitlab"
+           fetch="https://gitlab.pixelexperience.org/android"
+           revision="eleven" />
+
   <remote  name="colt"
            fetch="https://github.com/ColtOSTemp"
            revision="refs/heads/wip" />
@@ -23,6 +27,8 @@
 
   <!-- External repos -->
   <project path="external/airbnb-lottie" name="platform_external_airbnb-lottie" remote="colt" />
+  <project path="external/asus/stitchimage" name="android_external_asus_stitchimage" remote="colt" />
+  <project path="external/faceunlock" name="external_faceunlock" remote="pixel-gitlab" />
 
   <!-- Framework repos -->
   <project path="frameworks/av" name="platform_frameworks_av" remote="colt" />
@@ -58,6 +64,7 @@
   <project path="packages/apps/ColtEnigma" name="platform_packages_apps_ColtEnigma" remote="colt" />
   <project path="packages/apps/Dialer" name="platform_packages_apps_Dialer" remote="colt" />
   <project path="packages/apps/EmergencyInfo" name="platform_packages_apps_EmergencyInfo" remote="colt" />
+  <project path="packages/apps/FaceUnlockService" name="PixelExperience/packages_apps_FaceUnlockService" remote="github" revision="eleven" />
   <project path="packages/apps/Messaging" name="platform_packages_apps_Messaging" remote="colt" />
   <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="colt" />
   <project path="packages/apps/SettingsIntelligence" name="platform_packages_apps_SettingsIntelligence" remote="colt" />
