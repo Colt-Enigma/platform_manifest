@@ -81,4 +81,7 @@
   <project path="system/netd" name="platform_system_netd" remote="colt" />
   <project path="system/vold" name="platform_system_vold" remote="colt" />
 
+  <!-- Vendor repos -->
+  <project path="vendor/qcom/opensource/power" name="platform_vendor_qcom_opensource_power" remote="colt" />
+
 </manifest>
