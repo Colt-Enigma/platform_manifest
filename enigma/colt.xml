@@ -67,6 +67,7 @@
   <project path="packages/apps/FaceUnlockService" name="PixelExperience/packages_apps_FaceUnlockService" remote="github" revision="eleven" />
   <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="colt" />
   <project path="packages/apps/Messaging" name="platform_packages_apps_Messaging" remote="colt" />
+  <project path="packages/apps/OmniJaws" name="platform_packages_apps_OmniJaws" remote="colt" />
   <project path="packages/apps/OmniStyle" name="platform_packages_apps_OmniStyle" remote="colt" />
   <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="colt" />
   <project path="packages/apps/SettingsIntelligence" name="platform_packages_apps_SettingsIntelligence" remote="colt" />
