@@ -82,6 +82,7 @@
   <!-- System repos -->
   <project path="system/core" name="platform_system_core" remote="colt" />
   <project path="system/netd" name="platform_system_netd" remote="colt" />
+  <project path="system/sepolicy" name="platform_system_sepolicy" remote="colt" />
   <project path="system/vold" name="platform_system_vold" remote="colt" />
 
   <!-- Vendor repos -->
