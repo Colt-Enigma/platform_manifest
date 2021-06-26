@@ -12,8 +12,8 @@
            revision="eleven" />
 
   <remote  name="colt"
-           fetch="https://github.com/ColtOSTemp"
-           revision="refs/heads/wip" />
+           fetch="https://github.com/Colt-Enigma"
+           revision="refs/heads/c11" />
 
   <remote  name="colt-devices"
            fetch="https://github.com/ColtOS-Devices"
@@ -27,7 +27,7 @@
 
   <!-- External repos -->
   <project path="external/airbnb-lottie" name="platform_external_airbnb-lottie" remote="colt" />
-  <project path="external/asus/stitchimage" name="android_external_asus_stitchimage" remote="colt" />
+  <project path="external/asus/stitchimage" name="platform_external_asus_stitchimage" remote="colt" />
   <project path="external/faceunlock" name="external_faceunlock" remote="pixel-gitlab" />
 
   <!-- Framework repos -->
