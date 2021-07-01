@@ -104,7 +104,6 @@
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" remote="lineage" clone-depth="1" />
   <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="android_prebuilts_gcc_linux-x86_x86_x86_64-linux-android-4.9" remote="lineage" clone-depth="1" />
   <project path="prebuilts/tools-colt" name="android_prebuilts_tools-lineage" remote="lineage" clone-depth="1" />
-  <project path="tools/metalava" name="android_tools_metalava" remote="lineage" />
   <project path="tools/extract-utils" name="android_tools_extract-utils" remote="lineage" />
 
   <!-- External repos -->
@@ -148,7 +147,6 @@
   <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="lineage" />
 
   <!-- General repos -->
-  <project path="art" name="android_art" remote="lineage" />
   <project path="build/blueprint" name="android_build_blueprint" remote="lineage" />
 
   <!-- Hardware repos -->

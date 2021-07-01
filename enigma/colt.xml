@@ -29,6 +29,7 @@
   <project path="external/airbnb-lottie" name="platform_external_airbnb-lottie" remote="colt" />
   <project path="external/asus/stitchimage" name="platform_external_asus_stitchimage" remote="colt" />
   <project path="external/faceunlock" name="external_faceunlock" remote="pixel-gitlab" />
+  <project path="external/selinux" name="platform_external_selinux" remote="colt" />
 
   <!-- Framework repos -->
   <project path="frameworks/av" name="platform_frameworks_av" remote="colt" />
@@ -36,6 +37,7 @@
   <project path="frameworks/native" name="platform_frameworks_native" remote="colt" />
 
   <!-- General repos -->
+  <project path="art" name="platform_art" remote="colt" />
   <project path="bionic" name="platform_bionic" remote="colt" />
   <project path="bootable/recovery" name="platform_bootable_recovery" remote="colt" />
   <project path="build/make" name="platform_build_make" remote="colt" >
@@ -51,6 +53,7 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
+  <project path="libcore" name="platform_libcore" remote="colt" />
   <project path="manifest" name="platform_manifest" remote="colt" />
   <project path="vendor/colt" name="platform_vendor_colt" remote="colt" />
   <project path="vendor/ColtSpares" name="platform_vendor_ColtSpares" remote="colt" />
@@ -76,15 +79,22 @@
   <project path="packages/apps/Updates" name="platform_packages_apps_Updates" remote="colt" />
   <project path="packages/apps/WallpaperPicker2" name="platform_packages_apps_WallpaperPicker2" remote="colt" />
 
+  <!-- Prebuilt repos -->
+  <project path="prebuilts/abi-dumps/vndk" name="platform_prebuilts_abi-dumps_vndk" clone-depth="1" remote="colt" />
+
   <!-- Services repos -->
   <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" remote="colt" />
   <project path="packages/services/Telephony" name="platform_packages_services_Telephony" remote="colt" />
 
   <!-- System repos -->
   <project path="system/core" name="platform_system_core" remote="colt" />
+  <project path="system/iorap" name="platform_system_iorap" remote="colt" />
   <project path="system/netd" name="platform_system_netd" remote="colt" />
   <project path="system/sepolicy" name="platform_system_sepolicy" remote="colt" />
   <project path="system/vold" name="platform_system_vold" remote="colt" />
+
+  <!-- Tools repos -->
+  <project path="tools/metalava" name="platform_tools_metalava" remote="colt" />
 
   <!-- Vendor repos -->
   <project path="vendor/qcom/opensource/power" name="platform_vendor_qcom_opensource_power" remote="colt" />
