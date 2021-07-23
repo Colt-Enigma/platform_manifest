@@ -78,6 +78,7 @@
   <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" remote="colt" />
   <project path="packages/apps/Updates" name="platform_packages_apps_Updates" remote="colt" />
   <project path="packages/apps/WallpaperPicker2" name="platform_packages_apps_WallpaperPicker2" remote="colt" />
+  <project path="packages/apps/Plugins" name="platform_packages_apps_Plugins" remote="colt" />
 
   <!-- Prebuilt repos -->
   <project path="prebuilts/abi-dumps/vndk" name="platform_prebuilts_abi-dumps_vndk" clone-depth="1" remote="colt" />
