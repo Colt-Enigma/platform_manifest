@@ -81,6 +81,7 @@
   <project path="packages/apps/Plugins" name="platform_packages_apps_Plugins" remote="colt" />
   <project path="packages/apps/GamingMode" name="platform_packages_apps_GamingMode" remote="colt" />
   <project path="packages/apps/SoftAPManager" name="platform_packages_apps_SoftAPManager" remote="colt" />
+  <project path="packages/apps/SetupWizard" name="platform_packages_apps_SetupWizard" remote="colt" />
 
   <!-- Prebuilt repos -->
   <project path="prebuilts/abi-dumps/vndk" name="platform_prebuilts_abi-dumps_vndk" clone-depth="1" remote="colt" />
