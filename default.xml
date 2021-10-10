@@ -1098,5 +1098,6 @@
   <!-- Colt additions -->
   <include name="enigma/colt.xml" />
   <include name="enigma/lineage.xml" />
+  <include name="enigma/arrow.xml" />
 
 </manifest>
