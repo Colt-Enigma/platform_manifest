@@ -16,7 +16,7 @@
            revision="refs/heads/c12" />
 
 <project path="manifest" name="platform_manifest" remote="colt" />
-  <project path="build/make" name="platform_build" remote="colt" >
+  <project path="build/make" name="platform_build_make" remote="colt" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -35,11 +35,15 @@
   <project path="bionic" name="platform_bionic" groups="pdk" remote="colt" />
   <project path="bootable/recovery" name="platform_bootable_recovery" remote="colt" />
 
+  <project path="libcore" name="platform_libcore" groups="pdk" remote="colt" />
+
   <!-- external repos -->
   <project path="external/json-c" name="platform_external_json-c" remote="colt" />
   <project path="external/selinux" name="platform_external_selinux" remote="colt" />
   <project path="external/tinycompress" name="platform_external_tinycompress" remote="colt" />
   <project path="external/tinyxml" name="platform_external_tinyxml" remote="colt" />
+  <project path="external/colorkt" name="platform_external_colorkt" remote="colt" />
+  <project path="external/themelib" name="platform_external_themelib" remote="colt" />
 
   <!-- framework repos -->
   <project path="frameworks/av" name="platform_frameworks_av" remote="colt" />
@@ -47,13 +51,30 @@
   <project path="frameworks/native" name="platform_frameworks_native" remote="colt" />
 
   <!-- packages repos -->
+  <project path="packages/apps/Dialer" name="platform_packages_apps_Dialer" groups="pdk-fs" remote="colt" />
+  <project path="packages/apps/DeskClock" name="platform_packages_apps_DeskClock" groups="pdk-fs" remote="colt" />
+  <project path="packages/apps/DocumentsUI" name="platform_packages_apps_DocumentsUI" groups="pdk-fs" remote="colt" />
+  <project path="packages/apps/Messaging" name="platform_packages_apps_Messaging" groups="pdk-fs" remote="colt" />
+  <project path="packages/apps/Contacts" name="platform_packages_apps_Contacts" groups="pdk-fs" remote="colt" />
+  <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" groups="pdk-fs" remote="colt" />
+  <project path="packages/apps/WallpaperPicker2" name="platform_packages_apps_WallpaperPicker2" groups="pdk-fs" remote="colt" />
+  <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" groups="pdk-fs" remote="colt" />
+  <project path="packages/apps/SimpleDeviceConfig" name="platform_packages_apps_SimpleDeviceConfig" groups="pdk-fs" remote="colt" />
+  <project path="packages/apps/SettingsIntelligence" name="platform_packages_apps_SettingsIntelligence" groups="pdk-fs" remote="colt" />
   <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="colt" />
+
+  <!-- packages Modules repos -->
+  <project path="packages/modules/Permission" name="platform_packages_modules_Permission" groups="pdk-fs" remote="colt" />
+  <project path="packages/modules/Wifi" name="platform_packages_modules_Wifi" groups="pdk-fs" remote="colt" />
+  <project path="packages/modules/Connectivity" name="platform_packages_modules_Connectivity" groups="pdk-fs" remote="colt" />
 
   <!-- prebuilt repos -->
   <project path="prebuilts/abi-dumps/vndk" name="platform_prebuilts_abi-dumps_vndk" clone-depth="1" remote="colt" />
 
   <!-- system repos -->
   <project path="system/core" name="platform_system_core" remote="colt" />
+  <project path="system/tools/mkbootimg" name="platform_system_tools_mkbootimg" groups="pdk" remote="colt" />
+  <project path="system/update_engine" name="platform_system_update_engine" groups="pdk" remote="colt" />
 
   <!-- vendor repos -->
   <project path="vendor/colt" name="platform_vendor_colt" remote="colt" />
