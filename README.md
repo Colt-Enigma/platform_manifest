@@ -2,7 +2,7 @@
 <img src="https://github.com/Colt-Enigma/platform_manifest/blob/c12/assets/Banner_1.png" > 
 </p>
 
-ColtOS Android-12.0
+ColtOS Android-12.1
 ===============================
 
 [![Download ColtOS](https://img.shields.io/sourceforge/dm/coltos.svg?color=3498DB&label=ColtOS%20Downloads&style=for-the-badge&labelColor=1B4F72&logo=sourceforge)](https://sourceforge.net/projects/coltos/files)
@@ -41,7 +41,7 @@ To initialize your local repository using the ColtOS trees, use a
 command like this:
 
 ```bash
-  repo init -u https://github.com/Colt-Enigma/platform_manifest -b c12
+  repo init -u https://github.com/Colt-Enigma/platform_manifest -b c12.1
 ```
   
 Then to sync up:
@@ -60,13 +60,13 @@ Finally to build:
 
   # Inherit some common ColtOS stuff.
   $(call inherit-product, vendor/colt/config/common_full_phone.mk)
-  COLT_BUILD_MAINTAINER := mg712702
+  COLT_BUILD_MAINTAINER := RakeshBatra
  
   and use the following to build:
 
   . build/envsetup.sh
   lunch colt_[device-codename]-userdebug
-  maka colt -j$
+  make colt -j$
 ```
 
 Help from other devices for making them Official
