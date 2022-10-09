@@ -2,7 +2,7 @@
 <img src="https://github.com/Colt-Enigma/platform_manifest/blob/c12/assets/Banner_1.png" > 
 </p>
 
-ColtOS Android-12.1
+ColtOS Android-13.0
 ===============================
 
 [![Download ColtOS](https://img.shields.io/sourceforge/dm/coltos.svg?color=3498DB&label=ColtOS%20Downloads&style=for-the-badge&labelColor=1B4F72&logo=sourceforge)](https://sourceforge.net/projects/coltos/files)
@@ -41,14 +41,14 @@ To initialize your local repository using the ColtOS trees, use a
 command like this:
 
 ```bash
-  repo init -u https://github.com/Colt-Enigma/platform_manifest -b c12.1
+  repo init -u https://github.com/Colt-Enigma/platform_manifest -b c13
 ```
   
 Then to sync up:
 ----------------
 
 ```bash
-repo sync --no-tags --no-clone-bundle --force-sync -c
+repo sync
 ```
 Finally to build:
 -----------------
@@ -76,18 +76,9 @@ If you got some commits missing in our sources for your device, let us know on o
 
 Credits
 -------
-* [**Nitrogen Project**](https://github.com/nitrogen-project)
+* [**ArrowOS Project**](https://github.com/ArrowOS)
 * [**LineageOS/Cyanogenmod**](https://github.com/LineageOS)
-* [**AospExtended**](https://github.com/AospExtended)
-* [**DirtyUnicorns**](https://github.com/DirtyUnicorns)
-* [**BlissRoms**](https://github.com/BlissRoms)
-* [**ABC ROM**](https://github.com/ezio84)
-* [**GZOSP**](https://github.com/GZOSP)
-* [**Pure Nexus**](https://github.com/PureNexusProject)
-* [**OmniROM**](https://github.com/omnirom/)
-* [**AOSPA**](https://github.com/aospa/)
 * [**Project-Xtended**](https://github.com/Project-Xtended/)
-* [**Project-Legion**](https://github.com/Project-LegionOS/)
 * [**Thanks to all the custom rom community**]
 
 
