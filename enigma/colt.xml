@@ -24,6 +24,7 @@
   <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="colt" />
   <project path="device/qcom/sepolicy-legacy-um" name="platform_device_qcom_sepolicy-legacy-um" remote="colt" />
   <project path="device/qcom/sepolicy_vndr" name="platform_device_qcom_sepolicy_vndr" remote="colt" />
+  <project path="device/qcom/sepolicy_vndr-legacy-um" name="platform_device_qcom_sepolicy_vndr-legacy-um" remote="colt" />
 
   <!-- External -->
   <project path="external/selinux" name="platform_external_selinux" remote="colt" />
