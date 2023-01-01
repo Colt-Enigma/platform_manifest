@@ -26,11 +26,6 @@
            review="https://review.arrowos.net/"
            revision="refs/heads/arrow-13.0" />
 
-  <remote  name="arrow-12.1"
-           fetch="https://github.com/ArrowOS"
-           review="https://review.arrowos.net/"
-           revision="refs/heads/arrow-12.1" />
-
   <remote  name="arrow-gitlab"
            fetch="https://gitlab.com/arrowos-project"
            review="https://review.arrowos.net/"
