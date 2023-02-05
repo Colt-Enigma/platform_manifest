@@ -39,6 +39,7 @@
   <project path="hardware/colt/interfaces" name="platform_hardware_colt_interfaces" remote="colt" />
 
   <!-- Packages -->
+  <project path="packages/apps/Aperture" name="platform_packages_apps_Aperture" remote="colt" />
   <project path="packages/apps/Contacts" name="platform_packages_apps_Contacts" remote="colt" />
   <project path="packages/apps/DeskClock" name="platform_packages_apps_DeskClock" remote="colt" />
   <project path="packages/apps/Messaging" name="platform_packages_apps_Messaging" remote="colt" />

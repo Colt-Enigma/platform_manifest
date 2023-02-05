@@ -31,6 +31,10 @@
            review="https://review.arrowos.net/"
            revision="refs/heads/arrow-13.0" />
 
+  <remote name="lineage"
+        fetch="https://github.com/LineageOS"
+        revision="lineage-20.0" />
+
   <superproject name="platform/superproject" remote="aosp" revision="android-13.0.0_r20"/>
   <contactinfo bugurl="go/repo-bug" />
   <!-- BEGIN open-source projects -->
