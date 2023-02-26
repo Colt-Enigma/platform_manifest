@@ -48,6 +48,7 @@
   <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="colt" />
   <project path="packages/apps/ColtEnigma" name="platform_packages_apps_ColtEnigma" remote="colt" />
   <project path="packages/apps/Dialer" name="platform_packages_apps_Dialer" remote="colt" />
+  <project path="packages/apps/GameSpace" name="platform_packages_apps_GameSpace" remote="colt" />
   <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="colt" />
   <project path="packages/apps/Seedvault" name="platform_packages_apps_Seedvault" remote="colt" />
   <project path="packages/overlays/colt" name="platform_packages_overlays_colt" remote="colt" />

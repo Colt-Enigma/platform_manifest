@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote  name="crdroid-gitlab"
+           fetch="https://gitlab.com/"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/13.0" />
+
   <project path="art" name="android_art" remote="arrow" />
 
   <!-- device repos -->
@@ -97,6 +103,7 @@
   <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" remote="arrow" />
   <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="arrow" />
   <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="arrow" />
+  <project path="packages/apps/RepainterServicePriv" name="kdrag0n/android_packages_apps_RepainterServicePriv" remote="github" revision="main" />
 
   <!-- prebuilt repos -->
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" clone-depth="1" remote="arrow" />
@@ -152,5 +159,8 @@
 
   <!-- Hardware -->
   <project path="hardware/lineage/compat" name="android_hardware_lineage_compat" remote="lineage" />
+
+  <!-- Clang 16 version 16.0.2 -->
+  <project path="prebuilts/clang/host/linux-x86/clang-latest" name="crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r475365b" remote="crdroid-gitlab" />
 
 </manifest>
