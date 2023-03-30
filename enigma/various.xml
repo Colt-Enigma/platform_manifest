@@ -19,7 +19,7 @@
   <project path="external/ant-wireless/hidl" name="android_external_ant-wireless_hidl" remote="arrow" />
   <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="arrow" />
   <project path="external/exfatprogs" name="android_external_exfatprogs" remote="arrow" />
-  <project path="external/faceunlock" name="android_external_faceunlock" remote="arrow-gitlab" />
+  <!--project path="external/faceunlock" name="android_external_faceunlock" remote="arrow-gitlab" /-->
   <project path="external/f2fs-tools" name="android_external_f2fs-tools" remote="arrow" />
   <project path="external/gptfdisk" name="android_external_gptfdisk" remote="arrow" />
   <project path="external/mksh" name="android_external_mksh" remote="arrow" />
@@ -33,11 +33,13 @@
   <project path="frameworks/opt/net/ims" name="android_frameworks_opt_net_ims" remote="arrow" />
 
   <!-- hardware repos -->
-  <project path="hardware/qcom-caf/bootctrl" name="android_hardware_qcom_bootctrl" groups="qcom,pdk-qcom" remote="arrow" revision="arrow-13.0-caf" />
+  <project path="hardware/qcom-caf/bootctrl" name="android_hardware_qcom_bootctrl" groups="qcom,pdk-qcom" remote="arrow" revision="arrow-13.1-caf" />
   <project path="hardware/qcom-caf/common" name="android_hardware_qcom-caf_common" remote="arrow" >
     <!-- add guard for AOSP hardware/qcom dir -->
     <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
     <!-- add guards for CAF repositories -->
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8996-R/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996-R/Android.mk" />
     <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
     <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm660/Android.bp" />
@@ -56,41 +58,62 @@
     <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/sn100x/Android.bp" />
     <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/sn100x/Android.mk" />
   </project>
-  <project path="hardware/qcom-caf/msm8998/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-13.0-caf-msm8998" />
-  <project path="hardware/qcom-caf/msm8998/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="arrow" revision="arrow-13.0-caf-msm8998" />
-  <project path="hardware/qcom-caf/msm8998/media" name="android_hardware_qcom_media" groups="qcom" remote="arrow" revision="arrow-13.0-caf-msm8998" />
-  <project path="hardware/qcom-caf/sdm660/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-13.0-caf-sdm660" />
-  <project path="hardware/qcom-caf/sdm660/display" name="android_hardware_qcom_display" groups="qcom,qcom_display" remote="arrow" revision="arrow-13.0-caf-sdm660" />
-  <project path="hardware/qcom-caf/sdm660/media" name="android_hardware_qcom_media" groups="qcom,qcom_media" remote="arrow" revision="arrow-13.0-caf-sdm660" />
-  <project path="hardware/qcom-caf/sdm845/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-13.0-caf-sdm845" />
-  <project path="hardware/qcom-caf/sdm845/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="arrow" revision="arrow-13.0-caf-sdm845" />
-  <project path="hardware/qcom-caf/sdm845/media" name="android_hardware_qcom_media" groups="qcom" remote="arrow" revision="arrow-13.0-caf-sdm845" />
-  <project path="hardware/qcom-caf/sm8150/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-13.0-caf-sm8150" />
-  <project path="hardware/qcom-caf/sm8150/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="arrow" revision="arrow-13.0-caf-sm8150" />
-  <project path="hardware/qcom-caf/sm8150/media" name="android_hardware_qcom_media" groups="qcom" remote="arrow" revision="arrow-13.0-caf-sm8150" />
-  <project path="hardware/qcom-caf/sm8250/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-13.0-caf-sm8250" />
-  <project path="hardware/qcom-caf/sm8250/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="arrow" revision="arrow-13.0-caf-sm8250" />
-  <project path="hardware/qcom-caf/sm8250/media" name="android_hardware_qcom_media" groups="qcom" remote="arrow" revision="arrow-13.0-caf-sm8250" />
-  <project path="hardware/qcom-caf/sm8350/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-13.0-caf-sm8350" />
-  <project path="hardware/qcom-caf/sm8350/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="arrow" revision="arrow-13.0-caf-sm8350" />
-  <project path="hardware/qcom-caf/sm8350/media" name="android_hardware_qcom_media" groups="qcom" remote="arrow" revision="arrow-13.0-caf-sm8350" />
-  <project path="hardware/qcom-caf/wlan" name="android_hardware_qcom_wlan" groups="qcom_wlan" remote="arrow" revision="arrow-13.0-caf"/>
+  <project path="hardware/qcom-caf/msm8996-R/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-13.1-caf-msm8996-R" />
+  <project path="hardware/qcom-caf/msm8996-R/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="arrow" revision="arrow-13.1-caf-msm8996-R" />
+  <project path="hardware/qcom-caf/msm8996-R/media" name="android_hardware_qcom_media" groups="qcom" remote="arrow" revision="arrow-13.1-caf-msm8996-R" />
+  <project path="hardware/qcom-caf/msm8998/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-13.1-caf-msm8998" />
+  <project path="hardware/qcom-caf/msm8998/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="arrow" revision="arrow-13.1-caf-msm8998" />
+  <project path="hardware/qcom-caf/msm8998/media" name="android_hardware_qcom_media" groups="qcom" remote="arrow" revision="arrow-13.1-caf-msm8998" />
+  <project path="hardware/qcom-caf/sdm660/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-13.1-caf-sdm660" />
+  <project path="hardware/qcom-caf/sdm660/display" name="android_hardware_qcom_display" groups="qcom,qcom_display" remote="arrow" revision="arrow-13.1-caf-sdm660" />
+  <project path="hardware/qcom-caf/sdm660/media" name="android_hardware_qcom_media" groups="qcom,qcom_media" remote="arrow" revision="arrow-13.1-caf-sdm660" />
+  <project path="hardware/qcom-caf/sdm845/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-13.1-caf-sdm845" />
+  <project path="hardware/qcom-caf/sdm845/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="arrow" revision="arrow-13.1-caf-sdm845" />
+  <project path="hardware/qcom-caf/sdm845/media" name="android_hardware_qcom_media" groups="qcom" remote="arrow" revision="arrow-13.1-caf-sdm845" />
+  <project path="hardware/qcom-caf/sm8150/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-13.1-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8150/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="arrow" revision="arrow-13.1-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8150/media" name="android_hardware_qcom_media" groups="qcom" remote="arrow" revision="arrow-13.1-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8250/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-13.1-caf-sm8250" />
+  <project path="hardware/qcom-caf/sm8250/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="arrow" revision="arrow-13.1-caf-sm8250" />
+  <project path="hardware/qcom-caf/sm8250/media" name="android_hardware_qcom_media" groups="qcom" remote="arrow" revision="arrow-13.1-caf-sm8250" />
+  <project path="hardware/qcom-caf/sm8350/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-13.1-caf-sm8350" />
+  <project path="hardware/qcom-caf/sm8350/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="arrow" revision="arrow-13.1-caf-sm8350" />
+  <project path="hardware/qcom-caf/sm8350/media" name="android_hardware_qcom_media" groups="qcom" remote="arrow" revision="arrow-13.1-caf-sm8350" />
+  <project path="hardware/qcom-caf/wlan" name="android_hardware_qcom_wlan" groups="qcom_wlan" remote="arrow" revision="arrow-13.1-caf"/>
   <project path="hardware/qcom/sdm845/display" name="android_hardware_qcom_sdm845_display" groups="generic_fs,qcom_sdm845" remote="arrow"/>
   <project path="hardware/qcom/sdm845/media" name="android_hardware_qcom_sdm845_media" groups="generic_fs,qcom_sdm845" remote="arrow"/>
+  <project path="hardware/qcom/sm8150/data/ipacfg-mgr" name="android_hardware_qcom_sm8150_data_ipacfg-mgr" groups="generic_fs,qcom_sm8150" remote="arrow">
+    <linkfile src="os_pickup.mk" dest="hardware/qcom/sm8150/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom/sm8150/Android.bp" />
+  </project>
+  <project path="hardware/qcom/sm8150/display" name="android_hardware_qcom_sm8150_display" groups="generic_fs,qcom_sm8150" remote="arrow" />
+  <project path="hardware/qcom/sm8150/media" name="android_hardware_qcom_sm8150_media" groups="generic_fs,qcom_sm8150" remote="arrow" />
+  <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" remote="arrow" />
+  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="arrow" />
   <project path="hardware/libhardware" name="android_hardware_libhardware" remote="arrow" />
   <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="arrow" />
   <project path="hardware/ril" name="android_hardware_ril" groups="pdk" remote="arrow" />
 
   <!-- packages repos -->
+  <project path="packages/apps/ArrowPrebuilts" name="android_packages_apps_ArrowPrebuilts" remote="arrow" clone-depth="1" />
   <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="arrow" />
+  <project path="packages/apps/Contacts" name="android_packages_apps_Contacts" remote="arrow" />
+  <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" remote="arrow" />
+  <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="arrow" />
   <project path="packages/apps/EmergencyInfo" name="android_packages_apps_EmergencyInfo" remote="arrow" />
   <project path="packages/apps/ExactCalculator" name="android_packages_apps_ExactCalculator" remote="arrow" />
-  <project path="packages/apps/FaceUnlockService" name="android_packages_apps_FaceUnlockService" remote="arrow-gitlab" />
+  <!--project path="packages/apps/FaceUnlockService" name="android_packages_apps_FaceUnlockService" remote="arrow-gitlab" /-->
+  <!--project path="packages/apps/FMRadio" name="android_packages_apps_FMRadio" remote="arrow" /-->
+  <project path="packages/apps/Messaging" name="android_packages_apps_Messaging" remote="arrow" />
   <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="arrow" />
+  <project path="packages/apps/ParallelSpace" name="android_packages_apps_ParallelSpace" remote="arrow" />
+  <project path="packages/apps/Seedvault" name="android_packages_apps_Seedvault" remote="arrow" />
   <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" remote="arrow" />
+  <!--project path="packages/apps/TouchGestures" name="android_packages_apps_TouchGestures" remote="arrow" /-->
   <project path="packages/apps/Updater" name="android_packages_apps_Updater" remote="arrow" />
   <project path="packages/apps/SimpleDeviceConfig" name="android_packages_apps_SimpleDeviceConfig" remote="arrow" />
   <project path="packages/apps/WallpaperPicker2" name="android_packages_apps_WallpaperPicker2" remote="arrow" />
+  <project path="packages/inputmethods/LatinIME" name="android_packages_inputmethods_LatinIME" remote="arrow" />
   <project path="packages/modules/adb" name="android_packages_modules_adb" remote="arrow" />
   <project path="packages/modules/Bluetooth" name="android_packages_modules_Bluetooth" remote="arrow" />
   <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" remote="arrow" />
@@ -101,13 +124,13 @@
   <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" remote="arrow" />
   <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" remote="arrow" />
   <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="arrow" />
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="arrow" />
   <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="arrow" />
-  <project path="packages/apps/RepainterServicePriv" name="kdrag0n/android_packages_apps_RepainterServicePriv" remote="github" revision="main" />
 
   <!-- prebuilt repos -->
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" clone-depth="1" remote="arrow" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" clone-depth="1" remote="arrow" />
-  <project path="prebuilts/tools-colt" name="android_prebuilts_tools-extras" remote="arrow" />
+  <project path="prebuilts/tools-extras" name="android_prebuilts_tools-extras" remote="arrow" />
 
   <!-- system repos -->
   <project path="system/extras" name="android_system_extras" remote="arrow" />

@@ -11,30 +11,6 @@
            sync-f="true"
            sync-j="4" />
 
-  <remote  name="github"
-           fetch="https://github.com/" />
-
-  <remote  name="gitlab"
-           fetch="https://gitlab.com/" />
-
-  <remote  name="colt"
-           fetch="https://github.com/Colt-Enigma"
-           revision="refs/heads/c13" />
-
-  <remote  name="arrow"
-           fetch="https://github.com/ArrowOS"
-           review="https://review.arrowos.net/"
-           revision="refs/heads/arrow-13.0" />
-
-  <remote  name="arrow-gitlab"
-           fetch="https://gitlab.com/arrowos-project"
-           review="https://review.arrowos.net/"
-           revision="refs/heads/arrow-13.0" />
-
-  <remote name="lineage"
-        fetch="https://github.com/LineageOS"
-        revision="lineage-20.0" />
-
   <superproject name="platform/superproject" remote="aosp" revision="android-13.0.0_r30"/>
   <contactinfo bugurl="go/repo-bug" />
   <!-- BEGIN open-source projects -->
