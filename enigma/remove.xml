@@ -66,6 +66,10 @@
   <remove-project name="platform/hardware/ril" />
   <remove-project name="platform/hardware/qcom/sdm845/display" />
   <remove-project name="platform/hardware/qcom/sdm845/media" />
+  <remove-project name="platform/hardware/qcom/sm8150/data/ipacfg-mgr" />
+  <remove-project name="platform/hardware/qcom/sm8150/display" />
+  <remove-project name="platform/hardware/qcom/sm8150/media" />
+  <remove-project name="platform/hardware/qcom/wlan" />
 
   <!-- packages -->
   <remove-project name="platform/packages/apps/Camera2" />
@@ -80,6 +84,7 @@
   <remove-project name="platform/packages/apps/SettingsIntelligence" />
   <remove-project name="platform/packages/apps/ThemePicker" />
   <remove-project name="platform/packages/apps/WallpaperPicker2" />
+  <remove-project name="platform/packages/inputmethods/LatinIME" />
   <remove-project name="platform/packages/modules/adb" />
   <remove-project name="platform/packages/modules/Bluetooth" />
   <remove-project name="platform/packages/modules/Connectivity" />

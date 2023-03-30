@@ -89,7 +89,6 @@
   <project path="hardware/qcom/sm8150/display" name="android_hardware_qcom_sm8150_display" groups="generic_fs,qcom_sm8150" remote="arrow" />
   <project path="hardware/qcom/sm8150/media" name="android_hardware_qcom_sm8150_media" groups="generic_fs,qcom_sm8150" remote="arrow" />
   <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" remote="arrow" />
-  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="arrow" />
   <project path="hardware/libhardware" name="android_hardware_libhardware" remote="arrow" />
   <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="arrow" />
   <project path="hardware/ril" name="android_hardware_ril" groups="pdk" remote="arrow" />
