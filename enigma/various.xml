@@ -1,47 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote  name="crdroid-gitlab"
-           fetch="https://gitlab.com/"
-           sync-c="true"
-           sync-j="4"
-           revision="refs/heads/13.0" />
+    <remote name="lineage"
+        fetch="https://github.com/LineageOS"
+        revision="lineage-20.0" />
 
-  <project path="art" name="android_art" remote="arrow" />
+  <!-- External -->
+  <project path="external/ant-wireless/ant_client" name="android_external_ant-wireless_ant_client" groups="qcom,sdm660" remote="lineage" />
+  <project path="external/ant-wireless/ant_native" name="android_external_ant-wireless_ant_native" groups="qcom,sdm660" remote="lineage" />
+  <project path="external/ant-wireless/ant_service" name="android_external_ant-wireless_ant_service" groups="qcom,sdm660" remote="lineage" />
+  <project path="external/ant-wireless/antradio-library" name="android_external_ant-wireless_antradio-library" revision="lineage-19.0" remote="lineage" />
+  <project path="external/ant-wireless/hidl" name="android_external_ant-wireless_hidl" groups="qcom,qssi" remote="lineage" />
+  <project path="external/exfatprogs" name="android_external_exfatprogs" remote="lineage" />
+  <project path="external/gptfdisk" name="android_external_gptfdisk" groups="pdk" remote="lineage" />
+  <project path="external/json-c" name="android_external_json-c" remote="lineage" />
+  <project path="external/libcxx" name="android_external_libcxx" groups="pdk" remote="lineage" />
+  <project path="external/mksh" name="android_external_mksh" groups="pdk" remote="lineage" />
+  <project path="external/ntfs-3g" name="android_external_ntfs-3g" revision="lineage-19.1" remote="lineage" />
+  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" groups="pdk" remote="lineage" />
 
-  <!-- device repos -->
-  <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="arrow" />
+  <!-- Hardware -->
+  <project path="hardware/lineage/compat" name="android_hardware_lineage_compat" remote="lineage" />
+  <project path="hardware/lineage/livedisplay" name="android_hardware_lineage_livedisplay" groups="qcom,pdk-qcom" remote="lineage" />
+  <project path="hardware/qcom/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" remote="lineage" />
+  <project path="hardware/qcom/camera" name="android_hardware_qcom_camera" groups="qcom_camera,pdk-qcom" remote="lineage" />
+  <project path="hardware/qcom/data/ipacfg-mgr" name="android_hardware_qcom_data_ipacfg-mgr" groups="qcom,pdk-qcom" remote="lineage" />
+  <project path="hardware/qcom/display" name="android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" remote="lineage" />
+  <project path="hardware/qcom/gps" name="android_hardware_qcom_gps" groups="qcom,qcom_gps,pdk-qcom" remote="lineage" />
+  <project path="hardware/qcom/media" name="android_hardware_qcom_media" groups="qcom,pdk-qcom" remote="lineage" />
+  <project path="hardware/qcom-caf/thermal" name="android_hardware_qcom_thermal" groups="qcom,waipio-vendor" remote="lineage" />
+  <project path="hardware/qcom-caf/vr" name="android_hardware_qcom_vr" groups="qcom,sdm660" remote="lineage" />
+  <project path="hardware/qcom-caf/wlan" name="android_hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" remote="lineage" revision="lineage-20.0-caf" />
+  
+  <!-- Misc -->
+  <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="lineage" />
+  <project path="tools/extract-utils" name="android_tools_extract-utils" remote="lineage" />
 
-  <!-- external repos -->
-  <project path="external/ant-wireless/ant_client" name="android_external_ant-wireless_ant_client" remote="arrow" />
-  <project path="external/ant-wireless/ant_native" name="android_external_ant-wireless_ant_native" remote="arrow" />
-  <project path="external/ant-wireless/ant_service" name="android_external_ant-wireless_ant_service" remote="arrow" />
-  <project path="external/ant-wireless/hidl" name="android_external_ant-wireless_hidl" remote="arrow" />
-  <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="arrow" />
-  <project path="external/exfatprogs" name="android_external_exfatprogs" remote="arrow" />
-  <project path="external/faceunlock" name="android_external_faceunlock" remote="arrow-gitlab" />
-  <project path="external/f2fs-tools" name="android_external_f2fs-tools" remote="arrow" />
-  <project path="external/gptfdisk" name="android_external_gptfdisk" remote="arrow" />
-  <project path="external/mksh" name="android_external_mksh" remote="arrow" />
-  <project path="external/ntfs-3g" name="android_external_ntfs-3g" remote="arrow" />
-  <project path="external/json-c" name="android_external_json-c" remote="arrow" />
-  <project path="external/tinycompress" name="android_external_tinycompress" remote="arrow" />
-  <project path="external/tinyxml" name="android_external_tinyxml" remote="arrow" />
+  <!-- Prebuilts -->
+  <project path="prebuilts/extract-tools" name="android_prebuilts_extract-tools" clone-depth="1" remote="lineage" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" groups="pdk,linux,arm" clone-depth="1" remote="lineage" revision="lineage-19.1" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" groups="pdk,linux,arm" clone-depth="1" remote="lineage" revision="lineage-19.1" />
+  <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="android_prebuilts_gcc_linux-x86_x86_x86_64-linux-android-4.9" groups="pdk,linux,x86" clone-depth="1" remote="lineage" revision="lineage-19.1" />
+  <project path="prebuilts/tools-xtended" name="android_prebuilts_tools-lineage" remote="lineage" clone-depth="1" />
 
-  <!-- framework repos -->
-  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="arrow" />
-  <project path="frameworks/opt/net/ims" name="android_frameworks_opt_net_ims" remote="arrow" />
+  <!-- CAF -->
+  <project path="vendor/qcom/opensource/audio" name="android_vendor_qcom_opensource_audio" groups="qcom,qssi" remote="lineage" />
+  <project path="vendor/qcom/opensource/audio-hal/st-hal" name="android_vendor_qcom_opensource_audio-hal_st-hal" groups="qcom,lahaina" remote="lineage" />
+  <project path="vendor/qcom/opensource/commonsys-intf/display" name="android_vendor_qcom_opensource_display-commonsys-intf" groups="qcom,qssi" remote="lineage" />
+  <project path="vendor/qcom/opensource/commonsys/display" name="android_vendor_qcom_opensource_display-commonsys" groups="qcom,qssi" remote="lineage" />
+  <project path="vendor/qcom/opensource/display" name="android_vendor_qcom_opensource_display" groups="qcom" remote="lineage" />
+  <project path="vendor/qcom/opensource/fm-commonsys" name="android_vendor_qcom_opensource_fm-commonsys" groups="qcom,qssi" remote="lineage" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="android_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,waipio-vendor" remote="lineage" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um" name="android_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,lahaina" revision="lineage-20.0-legacy-um" remote="lineage" />
+  <project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" groups="qcom,waipio-vendor" remote="lineage"  />
+  <project path="vendor/qcom/opensource/healthd-ext" name="android_vendor_qcom_opensource_healthd-ext" groups="qcom,lahaina" remote="lineage" />
+  <project path="vendor/qcom/opensource/interfaces" name="android_vendor_qcom_opensource_interfaces" groups="qcom,qssi" remote="lineage" />
+  <!--<project path="vendor/qcom/opensource/libfmjni" name="android_vendor_qcom_opensource_libfmjni" groups="qcom" remote="lineage"  />-->
+  <project path="vendor/qcom/opensource/power" name="android_vendor_qcom_opensource_power" groups="qcom,waipio-vendor" remote="lineage" />
+  <project path="vendor/qcom/opensource/thermal-engine" name="android_vendor_qcom_opensource_thermal-engine" groups="qcom,waipio-vendor" remote="lineage" />
+  <project path="vendor/qcom/opensource/usb" name="android_vendor_qcom_opensource_usb" groups="qcom,waipio-vendor" remote="lineage" />
+  <project path="vendor/qcom/opensource/vibrator" name="android_vendor_qcom_opensource_vibrator" groups="qcom,waipio-vendor" remote="lineage" />
+  <project path="vendor/qcom/opensource/wfd-commonsys" name="android_vendor_qcom_opensource_wfd-commonsys" groups="qcom,waipio-video" remote="lineage" />
+    
 
-  <!-- hardware repos -->
-  <project path="hardware/qcom-caf/bootctrl" name="android_hardware_qcom_bootctrl" groups="qcom,pdk-qcom" remote="arrow" revision="arrow-13.0-caf" />
-  <project path="hardware/qcom-caf/common" name="android_hardware_qcom-caf_common" remote="arrow" >
+  <project path="art" name="art" groups="pdk" remote="xtended" revision="r35" />
+
+  <!-- External -->
+  <project path="external/colorkt" name="external_colorkt" remote="xtended" />
+  <project path="external/faceunlock" name="external_faceunlock" remote="x-gitlab" />
+  <project path="external/tinycompress" name="external_tinycompress" remote="xtended" />
+  <project path="external/themelib" name="external_themelib" remote="xtended" />
+  <project path="external/sqlite" name="external_sqlite" remote="xtended" />
+  <project path="external/zlib" name="external_zlib-ng" remote="xtended" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="xtended" revision="r35" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="xtended" />
+  <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs" remote="xtended" revision="r35" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="xtended" revision="r35" />
+  <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" remote="xtended" revision="r35" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="xtended" revision="r35" />
+
+  <!-- Hardware -->
+  <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" remote="xtended" >
     <!-- add guard for AOSP hardware/qcom dir -->
     <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
     <!-- add guards for CAF repositories -->
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8953/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8953/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
     <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
-    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm660/Android.bp" />
-    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm660/Android.mk" />
     <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm845/Android.mk" />
     <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
@@ -56,110 +106,89 @@
     <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/sn100x/Android.bp" />
     <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/sn100x/Android.mk" />
   </project>
-  <project path="hardware/qcom-caf/msm8998/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-13.0-caf-msm8998" />
-  <project path="hardware/qcom-caf/msm8998/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="arrow" revision="arrow-13.0-caf-msm8998" />
-  <project path="hardware/qcom-caf/msm8998/media" name="android_hardware_qcom_media" groups="qcom" remote="arrow" revision="arrow-13.0-caf-msm8998" />
-  <project path="hardware/qcom-caf/sdm660/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-13.0-caf-sdm660" />
-  <project path="hardware/qcom-caf/sdm660/display" name="android_hardware_qcom_display" groups="qcom,qcom_display" remote="arrow" revision="arrow-13.0-caf-sdm660" />
-  <project path="hardware/qcom-caf/sdm660/media" name="android_hardware_qcom_media" groups="qcom,qcom_media" remote="arrow" revision="arrow-13.0-caf-sdm660" />
-  <project path="hardware/qcom-caf/sdm845/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-13.0-caf-sdm845" />
-  <project path="hardware/qcom-caf/sdm845/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="arrow" revision="arrow-13.0-caf-sdm845" />
-  <project path="hardware/qcom-caf/sdm845/media" name="android_hardware_qcom_media" groups="qcom" remote="arrow" revision="arrow-13.0-caf-sdm845" />
-  <project path="hardware/qcom-caf/sm8150/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-13.0-caf-sm8150" />
-  <project path="hardware/qcom-caf/sm8150/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="arrow" revision="arrow-13.0-caf-sm8150" />
-  <project path="hardware/qcom-caf/sm8150/media" name="android_hardware_qcom_media" groups="qcom" remote="arrow" revision="arrow-13.0-caf-sm8150" />
-  <project path="hardware/qcom-caf/sm8250/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-13.0-caf-sm8250" />
-  <project path="hardware/qcom-caf/sm8250/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="arrow" revision="arrow-13.0-caf-sm8250" />
-  <project path="hardware/qcom-caf/sm8250/media" name="android_hardware_qcom_media" groups="qcom" remote="arrow" revision="arrow-13.0-caf-sm8250" />
-  <project path="hardware/qcom-caf/sm8350/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="arrow" revision="arrow-13.0-caf-sm8350" />
-  <project path="hardware/qcom-caf/sm8350/display" name="android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="arrow" revision="arrow-13.0-caf-sm8350" />
-  <project path="hardware/qcom-caf/sm8350/media" name="android_hardware_qcom_media" groups="qcom" remote="arrow" revision="arrow-13.0-caf-sm8350" />
-  <project path="hardware/qcom-caf/wlan" name="android_hardware_qcom_wlan" groups="qcom_wlan" remote="arrow" revision="arrow-13.0-caf"/>
-  <project path="hardware/qcom/sdm845/display" name="android_hardware_qcom_sdm845_display" groups="generic_fs,qcom_sdm845" remote="arrow"/>
-  <project path="hardware/qcom/sdm845/media" name="android_hardware_qcom_sdm845_media" groups="generic_fs,qcom_sdm845" remote="arrow"/>
-  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="arrow" />
-  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="arrow" />
-  <project path="hardware/ril" name="android_hardware_ril" groups="pdk" remote="arrow" />
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="xtended" revision="r35" />
+  <project path="hardware/qcom-caf/bootctrl" name="hardware_qcom_bootctrl" remote="xtended" revision="xt-caf" />
+  <project path="hardware/qcom-caf/bt" name="hardware_qcom_bt" groups="qcom,legacy-qcom" remote="xtended" revision="xt-caf" />
 
-  <!-- packages repos -->
-  <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="arrow" />
-  <project path="packages/apps/EmergencyInfo" name="android_packages_apps_EmergencyInfo" remote="arrow" />
-  <project path="packages/apps/ExactCalculator" name="android_packages_apps_ExactCalculator" remote="arrow" />
-  <project path="packages/apps/FaceUnlockService" name="android_packages_apps_FaceUnlockService" remote="arrow-gitlab" />
-  <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="arrow" />
-  <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" remote="arrow" />
-  <project path="packages/apps/Updater" name="android_packages_apps_Updater" remote="arrow" />
-  <project path="packages/apps/SimpleDeviceConfig" name="android_packages_apps_SimpleDeviceConfig" remote="arrow" />
-  <project path="packages/apps/WallpaperPicker2" name="android_packages_apps_WallpaperPicker2" remote="arrow" />
-  <project path="packages/modules/adb" name="android_packages_modules_adb" remote="arrow" />
-  <project path="packages/modules/Bluetooth" name="android_packages_modules_Bluetooth" remote="arrow" />
-  <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" remote="arrow" />
-  <project path="packages/modules/Permission" name="android_packages_modules_Permission" remote="arrow" />
-  <project path="packages/modules/Wifi" name="android_packages_modules_Wifi" remote="arrow" />
-  <project path="packages/providers/ContactsProvider" name="android_packages_providers_ContactsProvider" remote="arrow" />
-  <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" remote="arrow" />
-  <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" remote="arrow" />
-  <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" remote="arrow" />
-  <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="arrow" />
-  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="arrow" />
+  <!-- Audio Hals -->
+  <project path="hardware/qcom-caf/msm8996/audio" name="hardware_qcom_audio" remote="xtended" revision="xt-caf-msm8996" />
+  <project path="hardware/qcom-caf/msm8998/audio" name="hardware_qcom_audio" groups="qcom,legacy-qcom" remote="xtended" revision="xt-caf-msm8998" />
+  <project path="hardware/qcom-caf/sdm845/audio" name="hardware_qcom_audio" groups="qcom,sdm845" remote="xtended" revision="xt-caf-sdm845" />
+  <project path="hardware/qcom-caf/sm8150/audio" name="hardware_qcom_audio" groups="qcom,msmnile" remote="xtended" revision="xt-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8250/audio" name="hardware_qcom_audio" groups="qcom,kona" remote="xtended" revision="xt-caf-sm8250" />
+  <project path="hardware/qcom-caf/sm8350/audio" name="hardware_qcom_audio" groups="qcom,qcom_audio" revision="xt-caf-sm8350" remote="xtended" />
+
+  <!-- Display Hals -->
+  <project path="hardware/qcom-caf/msm8996/display" name="hardware_qcom_display" remote="xtended" revision="xt-caf-msm8996" />
+  <project path="hardware/qcom-caf/msm8998/display" name="hardware_qcom_display" groups="qcom,legacy-qcom" remote="xtended" revision="xt-caf-msm8998" />
+  <project path="hardware/qcom-caf/sdm845/display" name="hardware_qcom_display" groups="qcom" remote="xtended" revision="xt-caf-sdm845" />  
+  <project path="hardware/qcom-caf/sm8150/display" name="hardware_qcom_display" groups="qcom" remote="xtended" revision="xt-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8250/display" name="hardware_qcom_display" groups="qcom" remote="xtended" revision="xt-caf-sm8250" />  
+  <project path="hardware/qcom-caf/sm8350/display" name="hardware_qcom_display" groups="pdk,qcom,qcom_display" revision="xt-caf-sm8350" remote="xtended" />
+
+  <!-- Media Hals -->  
+  <project path="hardware/qcom-caf/msm8996/media" name="hardware_qcom_media" remote="xtended" revision="xt-caf-msm8996" />  
+  <project path="hardware/qcom-caf/msm8998/media" name="hardware_qcom_media" groups="qcom,legacy-qcom" remote="xtended" revision="xt-caf-msm8998" />
+  <project path="hardware/qcom-caf/sdm845/media" name="hardware_qcom_media" groups="qcom,sdm845" remote="xtended" revision="xt-caf-sdm845" />
+  <project path="hardware/qcom-caf/sm8150/media" name="hardware_qcom_media" groups="qcom,msmnile" remote="xtended" revision="xt-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8250/media" name="hardware_qcom_media" groups="qcom,kona" remote="xtended" revision="xt-caf-sm8250" />
+  <project path="hardware/qcom-caf/sm8350/media" name="hardware_qcom_media" groups="qcom" revision="xt-caf-sm8350" remote="xtended" />
+  
+  <!-- Nxp-Nfc -->
+  <project path="vendor/nxp/nfc" name="vendor_nxp_nfc" remote="xtended" />
+  <project path="vendor/nxp/secure_element" name="vendor_nxp_secure_element" remote="xtended"/>
+  <project path="vendor/nxp/secure_element_extns" name="vendor_nxp_secure_element_extns" remote="xtended"/>
+  <project path="vendor/nxp/opensource/interfaces/nfc" name="vendor_nxp_opensource_interfaces_nfc" remote="xtended"/>  
+  <project path="vendor/nxp/opensource/commonsys/external/libnfc-nci" name="vendor_nxp_opensource_commonsys_external_libnfc-nci" remote="xtended"/>  
+  <project path="vendor/nxp/opensource/commonsys/frameworks" name="vendor_nxp_opensource_commonsys_frameworks" remote="xtended"/>  
+  <project path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" name="vendor_nxp_opensource_commonsys_packages_apps_Nfc" remote="xtended"/>   
+  <project path="vendor/nxp/opensource/pn5xx/halimpl" name="vendor_nxp_opensource_halimpl" remote="xtended" revision="xt-pn5xx" />
+  <project path="vendor/nxp/opensource/pn5xx/hidlimpl" name="vendor_nxp_opensource_hidlimpl" remote="xtended" revision="xt-pn5xx" />
+  <project path="vendor/nxp/opensource/sn100x/halimpl" name="vendor_nxp_opensource_halimpl" remote="xtended" revision="xt-sn100x" />
+  <project path="vendor/nxp/opensource/sn100x/hidlimpl" name="vendor_nxp_opensource_hidlimpl" remote="xtended" revision="xt-sn100x" />
+    
+  <!-- Packages -->
+  <project path="packages/apps/Aperture" name="packages_apps_Aperture" remote="xtended" />
+  <project path="packages/apps/Contacts" name="packages_apps_Contacts" groups="pdk-fs" remote="xtended" revision="r35" />
+  <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" groups="pdk-fs" remote="xtended" />
+  <project path="packages/apps/Dialer" name="packages_apps_Dialer" groups="pdk-fs" remote="xtended" revision="r35" />
+  <project path="packages/apps/DocumentsUI" name="packages_apps_DocumentsUI" groups="pdk-cw-fs,pdk-fs" remote="xtended" revision="r35" />
+  <project path="packages/apps/ExactCalculator" name="packages_apps_ExactCalculator" remote="xtended" />
+  <project path="packages/apps/FaceUnlockService" name="packages_apps_FaceUnlockService" remote="x-gitlab" />
+  <project path="packages/apps/Gallery2" name="packages_apps_Gallery2" groups="pdk-fs" remote="xtended" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="xtended" revision="wip" />
+  <project path="packages/apps/Messaging" name="packages_apps_Messaging" groups="pdk-fs" remote="xtended" revision="wip" />
+  <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="xtended" revision="r35" />
+  <project path="packages/apps/ParallelSpace" name="packages_apps_ParallelSpace" remote="xtended" />
   <project path="packages/apps/RepainterServicePriv" name="kdrag0n/android_packages_apps_RepainterServicePriv" remote="github" revision="main" />
+  <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" groups="pdk-fs" remote="xtended" revision="r35" />
+  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="xtended" revision="r35" />
+  <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" remote="xtended" revision="r35" />
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" remote="xtended" revision="r35" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" remote="xtended" revision="r35" />
+  <project path="packages/modules/NetworkStack" name="packages_modules_NetworkStack" remote="xtended" />
+  <project path="packages/modules/Permission" name="packages_modules_Permission" remote="xtended" revision="r35" />
+  <project path="packages/modules/Wifi" name="packages_modules_Wifi" remote="xtended" revision="r35" />
+  <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="xtended" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="xtended" revision="r35" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="xtended" revision="r35" />
 
-  <!-- prebuilt repos -->
-  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" clone-depth="1" remote="arrow" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" clone-depth="1" remote="arrow" />
-  <project path="prebuilts/tools-colt" name="android_prebuilts_tools-extras" remote="arrow" />
+  <!-- providers -->
+  <project path="packages/providers/ContactsProvider" name="packages_providers_ContactsProvider" remote="xtended" revision="r35" />
+ 
+  <!-- System -->
+  <project path="system/core" name="system_core" remote="xtended" revision="r35" />
+  <project path="system/media" name="system_media" remote="xtended" revision="r35" />
+  <project path="system/security" name="system_security" remote="xtended" />
+  <project path="system/vold" name="system_vold" remote="xtended" revision="r35" />
+  
+  <!-- Tools -->
+  <project path="tools/platform-compat" name="tools_platform-compat" remote="xtended" />
+  
+  <!-- Vendor -->
+  <project path="vendor/codeaurora/telephony" name="vendor_codeaurora_telephony" remote="xtended" />
+  <project path="vendor/gapps" name="gapps/vendor_gapps" remote="x-gitlab" />
+  <project path="vendor/xtras" name="vendor_xtras" remote="xtended" revision="wip" />
 
-  <!-- system repos -->
-  <project path="system/extras" name="android_system_extras" remote="arrow" />
-  <project path="system/libhwbinder" name="android_system_libhwbinder" remote="arrow" />
-  <project path="system/libziparchive" name="android_system_libziparchive" remote="arrow" />
-  <project path="system/logging" name="android_system_logging" remote="arrow" />
-  <project path="system/media" name="android_system_media" remote="arrow" />
-  <project path="system/qcom" name="android_system_qcom" remote="arrow" />
-  <project path="system/tools/mkbootimg" name="android_system_tools_mkbootimg" remote="arrow" />
-  <project path="system/security" name="android_system_security" remote="arrow" />
-  <project path="system/libhidl" name="android_system_libhidl" remote="arrow" />
-  <project path="system/vold" name="android_system_vold" remote="arrow" />
-
-  <!-- tools repos -->
-  <project path="tools/extract-utils" name="android_tools_extract-utils" remote="arrow" />
-
-  <!-- infrastructure repos -->
-  <project path="infrastructure/devices" name="arrow_infrastructure_devices" remote="arrow" />
-
-  <!-- vendor repos -->
-  <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="arrow" />
-  <project path="vendor/gapps" name="android_vendor_gapps" remote="arrow-gitlab" clone-depth="1" />
-  <project path="vendor/nxp/nfc" name="android_vendor_nxp_nfc" remote="arrow" />
-  <project path="vendor/nxp/secure_element" name="android_vendor_nxp_secure_element" remote="arrow" />
-  <project path="vendor/nxp/secure_element_extns" name="android_vendor_nxp_secure_element_extns" remote="arrow" />
-  <project path="vendor/nxp/opensource/interfaces/nfc" name="android_vendor_nxp_interfaces_opensource_nfc" remote="arrow" />
-  <project path="vendor/nxp/opensource/commonsys/external/libnfc-nci" name="android_vendor_nxp_opensource_external_libnfc-nci" remote="arrow" />
-  <project path="vendor/nxp/opensource/commonsys/frameworks" name="android_vendor_nxp_opensource_frameworks" remote="arrow" />
-  <project path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" name="android_vendor_nxp_opensource_packages_apps_Nfc" remote="arrow" />
-  <project path="vendor/nxp/opensource/pn5xx/halimpl" name="android_vendor_nxp_opensource_halimpl" remote="arrow" revision="arrow-13.0-pn5xx" />
-  <project path="vendor/nxp/opensource/pn5xx/hidlimpl" name="android_vendor_nxp_opensource_hidlimpl" remote="arrow" revision="arrow-13.0-pn5xx" />
-  <project path="vendor/nxp/opensource/sn100x/halimpl" name="android_vendor_nxp_opensource_halimpl" remote="arrow" revision="arrow-13.0-sn100x" />
-  <project path="vendor/nxp/opensource/sn100x/hidlimpl" name="android_vendor_nxp_opensource_hidlimpl" remote="arrow" revision="arrow-13.0-sn100x" />
-  <project path="vendor/qcom/opensource/audio" name="android_vendor_qcom_opensource_audio" remote="arrow" />
-  <project path="vendor/qcom/opensource/audio-hal/st-hal" name="android_vendor_qcom_opensource_audio-hal_st-hal" remote="arrow" />
-  <project path="vendor/qcom/opensource/commonsys/display" name="android_vendor_qcom_opensource_display-commonsys" remote="arrow" />
-  <project path="vendor/qcom/opensource/commonsys-intf/display" name="android_vendor_qcom_opensource_display-commonsys-intf" remote="arrow" />
-  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="android_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="arrow" />
-  <project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" remote="arrow" />
-  <project path="vendor/qcom/opensource/fm-commonsys" name="android_vendor_qcom_opensource_fm-commonsys" remote="arrow" />
-  <project path="vendor/qcom/opensource/healthd-ext" name="android_vendor_qcom_opensource_healthd-ext" remote="arrow"/>
-  <project path="vendor/qcom/opensource/interfaces" name="android_vendor_qcom_opensource_interfaces" remote="arrow" />
-  <project path="vendor/qcom/opensource/power" name="android_vendor_qcom_opensource_power" remote="arrow" />
-  <project path="vendor/qcom/opensource/thermal-engine" name="android_vendor_qcom_opensource_thermal-engine" remote="arrow" />
-  <project path="vendor/qcom/opensource/vibrator" name="android_vendor_qcom_opensource_vibrator" remote="arrow" />
-  <project path="vendor/qcom/opensource/usb" name="android_vendor_qcom_opensource_usb" remote="arrow" />
-  <project path="vendor/qcom/opensource/wfd-commonsys" name="android_vendor_qcom_opensource_wfd-commonsys" remote="arrow" />
-
-  <!-- Hardware -->
-  <project path="hardware/lineage/compat" name="android_hardware_lineage_compat" remote="lineage" />
-
-  <!-- Clang 16 version 16.0.2 -->
-  <project path="prebuilts/clang/host/linux-x86/clang-latest" name="crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r475365b" remote="crdroid-gitlab" />
 
 </manifest>
