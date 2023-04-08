@@ -2,7 +2,7 @@
 <img src="https://github.com/Colt-Enigma/platform_manifest/blob/c12/assets/Banner_1.png" > 
 </p>
 
-ColtOS Android-13.0
+ColtOS Version-13.1
 ===============================
 
 [![Download ColtOS](https://img.shields.io/sourceforge/dm/coltos.svg?color=3498DB&label=ColtOS%20Downloads&style=for-the-badge&labelColor=1B4F72&logo=sourceforge)](https://sourceforge.net/projects/coltos/files)
@@ -41,7 +41,7 @@ To initialize your local repository using the ColtOS trees, use a
 command like this:
 
 ```bash
-  repo init -u https://github.com/Colt-Enigma/platform_manifest -b c13
+  repo init -u https://github.com/Colt-Enigma/platform_manifest -b c13.1
 ```
   
 Then to sync up:
@@ -58,11 +58,15 @@ Finally to build:
 
   TARGET_BOOT_ANIMATION_RES := 1080 : Please change as per your device resolution
 
-  # Inherit some common ColtOS stuff.
-  $(call inherit-product, vendor/colt/config/common_full_phone.mk)
-  COLT_BUILD_MAINTAINER := RakeshBatra
+ # Inherit some common ColtOS stuff.
+
+for all the ColtOS Stuff:  $(call inherit-product, vendor/colt/config/common_full_phone.mk)
+
+for maintainer:  COLT_BUILD_MAINTAINER := RakeshBatra
+
+for Gapps Build: COLT_GAPPS := true
  
-  and use the following to build:
+and use the following to build:
 
   . build/envsetup.sh
   lunch colt_[device-codename]-userdebug
