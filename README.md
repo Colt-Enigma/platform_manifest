@@ -2,7 +2,7 @@
 <img src="https://github.com/Colt-Enigma/platform_manifest/blob/c12/assets/Banner_1.png" > 
 </p>
 
-ColtOS Version-13.1
+ColtOS Version-13.2
 ===============================
 
 [![Download ColtOS](https://img.shields.io/sourceforge/dm/coltos.svg?color=3498DB&label=ColtOS%20Downloads&style=for-the-badge&labelColor=1B4F72&logo=sourceforge)](https://sourceforge.net/projects/coltos/files)
@@ -64,7 +64,7 @@ for all the ColtOS Stuff:  $(call inherit-product, vendor/colt/config/common_ful
 
 for maintainer:  COLT_BUILD_MAINTAINER := RakeshBatra
 
-for Gapps Build: COLT_GAPPS := true
+for Gapps Build: WITH_GAPPS := true
  
 and use the following to build:
 
