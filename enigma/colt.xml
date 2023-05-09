@@ -35,6 +35,10 @@
   <remote name="lineage"
         fetch="https://github.com/LineageOS"
         revision="lineage-20.0" />
+        
+  <remote  name="c-gitlab"
+           fetch="https://gitlab.com/GhosutoX/android_vendor_gms"
+           revision="refs/heads/pyro" />
 
   <project path="manifest" name="platform_manifest" remote="colt" revision="c13.1" />
   <project path="build/make" name="platform_build_make" remote="colt" revision="c13.1" >
@@ -54,13 +58,16 @@
   <project path="bionic" name="platform_bionic" groups="pdk" remote="colt" revision="c13.1" />
   <project path="bootable/recovery" name="platform_bootable_recovery" remote="colt" revision="c13.1" />
   <project path="platform_testing" name="platform_testing" remote="colt" revision="c13.1" />
+  
+  <project path="art" name="platform_art" groups="pdk" remote="colt" revision="c13.1"/>
 
   <!-- External -->
   <project path="external/zlib" name="platform_external_zlib" remote="colt" />
 
   <!-- Frameworks -->
   <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="colt" revision="c13.1" />
-  <project path="frameworks/av" name="platform_frameworks_av" groups="pdk-cw-fs,pdk-fs" remote="colt" revision="c13.1" />  
+  <project path="frameworks/av" name="platform_frameworks_av" groups="pdk-cw-fs,pdk-fs" remote="colt" revision="c13.1" />
+  <project path="frameworks/native" name="platform_frameworks_native" groups="pdk-cw-fs,pdk-fs" remote="colt" revision="c13.1"/>  
   <project path="frameworks/libs/systemui" name="platform_frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs" remote="colt" revision="c13.1" />
 
   <!-- Device -->
@@ -79,6 +86,9 @@
   <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="colt" revision="c13.1" />
   <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="colt" revision="c13.1" />
   <project path="packages/apps/GameSpace" name="platform_packages_apps_GameSpace" remote="colt" revision="c13.1" />
+  <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" remote="colt" revision="c13.1"/>
+  <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" remote="colt" revision="c13.1"/>
+  <project path="packages/modules/Bluetooth" name="platform_packages_modules_Bluetooth" remote="colt" revision="c13.1"/>
 
   <!-- System -->
   <project path="system/sepolicy" name="platform_system_sepolicy" remote="colt" revision="c13.1" />
