@@ -9,7 +9,7 @@
 
   <remote  name="colt"
            fetch="https://github.com/Colt-Enigma"
-           revision="refs/heads/c13.1" />
+           revision="refs/heads/minimal" />
 
   <remote  name="arrow"
            fetch="https://github.com/ArrowOS"
@@ -40,8 +40,8 @@
         fetch="https://gitlab.com/GhosutoX"
         revision="refs/heads/pyro" />
 
-  <project path="manifest" name="platform_manifest" remote="colt" revision="c13.1" />
-  <project path="build/make" name="platform_build_make" remote="colt" revision="c13.1" >
+  <project path="manifest" name="platform_manifest" remote="colt" revision="minimal" />
+  <project path="build/make" name="platform_build_make" remote="colt" revision="minimal" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -50,34 +50,36 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="platform_build_soong" groups="pdk,tradefed" remote="colt" revision="c13.1" >
+  <project path="build/soong" name="platform_build_soong" groups="pdk,tradefed" remote="colt" revision="minimal" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
-  <project path="bionic" name="platform_bionic" groups="pdk" remote="colt" revision="c13.1" />
-  <project path="bootable/recovery" name="platform_bootable_recovery" remote="colt" revision="c13.1" />
+  <project path="bionic" name="platform_bionic" groups="pdk" remote="colt" revision="minimal" />
+  <project path="bootable/recovery" name="platform_bootable_recovery" remote="colt" revision="minimal" />
   
   <!-- Frameworks -->
-  <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="colt" revision="c13.1" />
+  <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="colt" revision="minimal" />
+  <project path="frameworks/av" name="platform_frameworks_av" groups="pdk-cw-fs,pdk-fs" remote="colt" revision="minimal" />
+  <project path="frameworks/native" name="platform_frameworks_native" groups="pdk-cw-fs,pdk-fs" remote="colt" revision="minimal"/>
 
   <!-- Device -->
-  <project path="device/colt/sepolicy" name="platform_device_colt_sepolicy" remote="colt" revision="c13.1" />
-  <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="colt" revision="c13.1" />
-  <project path="device/qcom/sepolicy-legacy-um" name="platform_device_qcom_sepolicy-legacy-um" remote="colt" revision="c13.1" />
-  <project path="device/qcom/sepolicy_vndr" name="platform_device_qcom_sepolicy_vndr" remote="colt" revision="c13.1" />
-  <project path="device/qcom/sepolicy_vndr-legacy-um" name="platform_device_qcom_sepolicy_vndr-legacy-um" remote="colt" revision="c13.1" />
+  <project path="device/colt/sepolicy" name="platform_device_colt_sepolicy" remote="colt" revision="minimal" />
+  <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="colt" revision="minimal" />
+  <project path="device/qcom/sepolicy-legacy-um" name="platform_device_qcom_sepolicy-legacy-um" remote="colt" revision="minimal" />
+  <project path="device/qcom/sepolicy_vndr" name="platform_device_qcom_sepolicy_vndr" remote="colt" revision="minimal" />
+  <project path="device/qcom/sepolicy_vndr-legacy-um" name="platform_device_qcom_sepolicy_vndr-legacy-um" remote="colt" revision="minimal" />
 
   <!-- Hardware -->
-  <project path="hardware/colt/interfaces" name="platform_hardware_colt_interfaces" remote="colt" revision="c13.1" />
-  <project path="hardware/interfaces" name="platform_hardware_interfaces" remote="colt" revision="c13.1" />
+  <project path="hardware/colt/interfaces" name="platform_hardware_colt_interfaces" remote="colt" revision="minimal" />
+  <project path="hardware/interfaces" name="platform_hardware_interfaces" remote="colt" revision="minimal" />
 
   <!-- Packages -->
-  <project path="packages/apps/ColtEnigma" name="platform_packages_apps_ColtEnigma" remote="colt" revision="c13.1" />
-  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="colt" revision="c13.1" />
+  <project path="packages/apps/ColtEnigma" name="platform_packages_apps_ColtEnigma" remote="colt" revision="minimal" />
+  <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="colt" revision="minimal" />
+  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="colt" revision="minimal" />
 
   <!-- Vendor -->
-  <project path="vendor/colt" name="platform_vendor_colt" remote="colt" revision="c13.1" />
-  <project path="vendor/xtras" name="platform_vendor_xtras" remote="colt" revision="c13.1" />
+  <project path="vendor/colt" name="platform_vendor_colt" remote="colt" revision="minimal" />
 
 </manifest>

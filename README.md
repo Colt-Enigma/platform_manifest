@@ -41,7 +41,7 @@ To initialize your local repository using the ColtOS trees, use a
 command like this:
 
 ```bash
-  repo init -u https://github.com/Colt-Enigma/platform_manifest -b c13.1
+  repo init -u https://github.com/Colt-Enigma/platform_manifest -b minimal
 ```
   
 Then to sync up:
