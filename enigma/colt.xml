@@ -21,16 +21,9 @@
            review="https://review.arrowos.net/"
            revision="refs/heads/arrow-13.1" />
 
-  <remote  name="x-gitlab"
-           fetch="https://gitlab.com/project-xtended"
-           revision="refs/heads/xt" />
-
-  <remote  name="xtended"
-           fetch="https://github.com/Project-Xtended"
-           revision="refs/heads/xt" />
-
-  <remote  name="Xtended-Devices"
-           fetch="https://github.com/Xtended-Devices" />
+  <remote  name="colt-gitlab"
+           fetch="https://gitlab.com/coltos"
+           revision="refs/heads/minimal" />
 
   <remote name="lineage"
         fetch="https://github.com/LineageOS"
@@ -62,6 +55,7 @@
   <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="colt" revision="minimal" />
   <project path="frameworks/av" name="platform_frameworks_av" groups="pdk-cw-fs,pdk-fs" remote="colt" revision="minimal" />
   <project path="frameworks/native" name="platform_frameworks_native" groups="pdk-cw-fs,pdk-fs" remote="colt" revision="minimal"/>
+  <project path="frameworks/libs/systemui" name="platform_frameworks_libs_systemui" remote="colt" revision="minimal" />
 
   <!-- Device -->
   <project path="device/colt/sepolicy" name="platform_device_colt_sepolicy" remote="colt" revision="minimal" />
@@ -76,10 +70,19 @@
 
   <!-- Packages -->
   <project path="packages/apps/ColtEnigma" name="platform_packages_apps_ColtEnigma" remote="colt" revision="minimal" />
+  <project path="packages/apps/GameSpace" name="platform_packages_apps_GameSpace" remote="colt" revision="minimal" />
   <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="colt" revision="minimal" />
+  <project path="packages/apps/ParanoidSense" name="platform_packages_apps_ParanoidSense" remote="colt-gitlab" />
   <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="colt" revision="minimal" />
+  <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" remote="colt" revision="minimal" />
+  <project path="packages/services/OmniJaws" name="platform_packages_services_OmniJaws" remote="colt" revision="minimal" />
 
   <!-- Vendor -->
   <project path="vendor/colt" name="platform_vendor_colt" remote="colt" revision="minimal" />
+  <project path="vendor/google/gms" name="vendor_google_gms" remote="colt-gitlab" />
+  <project path="vendor/google/pixel" name="vendor_google_pixel" remote="colt-gitlab" />
+
+  <!-- System -->
+  <project path="system/sepolicy" name="platform_system_sepolicy" remote="colt" revision="minimal" />
 
 </manifest>
