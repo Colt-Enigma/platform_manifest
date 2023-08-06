@@ -79,8 +79,6 @@
 
   <!-- Vendor -->
   <project path="vendor/colt" name="platform_vendor_colt" remote="colt" revision="minimal" />
-  <project path="vendor/google/gms" name="vendor_google_gms" remote="colt-gitlab" />
-  <project path="vendor/google/pixel" name="vendor_google_pixel" remote="colt-gitlab" />
 
   <!-- System -->
   <project path="system/sepolicy" name="platform_system_sepolicy" remote="colt" revision="minimal" />
