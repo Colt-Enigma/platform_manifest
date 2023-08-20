@@ -69,6 +69,7 @@
   <project path="hardware/interfaces" name="platform_hardware_interfaces" remote="colt" revision="minimal" />
 
   <!-- Packages -->
+  <project path="packages/apps/Aperture" name="platform_packages_apps_Aperture"  remote="colt" revision="minimal" />
   <project path="packages/apps/ColtEnigma" name="platform_packages_apps_ColtEnigma" remote="colt" revision="minimal" />
   <project path="packages/apps/GameSpace" name="platform_packages_apps_GameSpace" remote="colt" revision="minimal" />
   <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="colt" revision="minimal" />
@@ -76,6 +77,7 @@
   <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="colt" revision="minimal" />
   <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" remote="colt" revision="minimal" />
   <project path="packages/services/OmniJaws" name="platform_packages_services_OmniJaws" remote="colt" revision="minimal" />
+  <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" remote="colt" revision="minimal"/>
 
   <!-- Vendor -->
   <project path="vendor/colt" name="platform_vendor_colt" remote="colt" revision="minimal" />
