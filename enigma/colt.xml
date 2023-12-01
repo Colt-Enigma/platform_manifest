@@ -9,32 +9,18 @@
 
   <remote  name="colt"
            fetch="https://github.com/Colt-Enigma"
-           revision="refs/heads/minimal" />
-
-  <remote  name="arrow"
-           fetch="https://github.com/ArrowOS"
-           review="https://review.arrowos.net/"
-           revision="refs/heads/arrow-13.1" />
-
-  <remote  name="arrow-gitlab"
-           fetch="https://gitlab.com/arrowos-project"
-           review="https://review.arrowos.net/"
-           revision="refs/heads/arrow-13.1" />
+           revision="refs/heads/c14" />
 
   <remote  name="colt-gitlab"
            fetch="https://gitlab.com/coltos"
-           revision="refs/heads/minimal" />
+           revision="refs/heads/c14" />
 
-  <remote name="lineage"
-        fetch="https://github.com/LineageOS"
-        revision="lineage-20.0" />
-        
-  <remote name="g-gitlab"
-        fetch="https://gitlab.com/GhosutoX"
-        revision="refs/heads/pyro" />
-
-  <project path="manifest" name="platform_manifest" remote="colt" revision="minimal" />
-  <project path="build/make" name="platform_build_make" remote="colt" revision="minimal" >
+<!-- General repos -->
+  <project path="art" name="platform_art" remote="colt" />
+  <project path="bionic" name="platform_bionic" remote="colt" />
+  <project path="bootable/recovery" name="platform_bootable_recovery" remote="colt" />
+  <project path="manifest" name="platform_manifest" remote="colt" />
+  <project path="build/make" name="platform_build_make" remote="colt" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -43,49 +29,63 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="platform_build_soong" groups="pdk,tradefed" remote="colt" revision="minimal" >
+  <project path="build/soong" name="platform_build_soong" groups="pdk,tradefed" remote="colt" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
-  <project path="bionic" name="platform_bionic" groups="pdk" remote="colt" revision="minimal" />
-  <project path="bootable/recovery" name="platform_bootable_recovery" remote="colt" revision="minimal" />
-  
-  <!-- Frameworks -->
-  <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="colt" revision="minimal" />
-  <project path="frameworks/av" name="platform_frameworks_av" groups="pdk-cw-fs,pdk-fs" remote="colt" revision="minimal" />
-  <project path="frameworks/native" name="platform_frameworks_native" groups="pdk-cw-fs,pdk-fs" remote="colt" revision="minimal"/>
-  <project path="frameworks/libs/systemui" name="platform_frameworks_libs_systemui" remote="colt" revision="minimal" />
-
   <!-- Device -->
-  <project path="device/colt/sepolicy" name="platform_device_colt_sepolicy" remote="colt" revision="minimal" />
-  <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="colt" revision="minimal" />
-  <project path="device/qcom/sepolicy-legacy-um" name="platform_device_qcom_sepolicy-legacy-um" remote="colt" revision="minimal" />
-  <project path="device/qcom/sepolicy_vndr" name="platform_device_qcom_sepolicy_vndr" remote="colt" revision="minimal" />
-  <project path="device/qcom/sepolicy_vndr-legacy-um" name="platform_device_qcom_sepolicy_vndr-legacy-um" remote="colt" revision="minimal" />
+  <project path="device/colt/sepolicy" name="platform_device_colt_sepolicy" remote="colt" revision="c14" />
+  <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="colt" revision="c14" />
+  <project path="device/qcom/sepolicy-legacy-um" name="platform_device_qcom_sepolicy-legacy-um" remote="colt" revision="c14" />
+  <project path="device/qcom/sepolicy_vndr" name="platform_device_qcom_sepolicy_vndr" remote="colt" revision="c14" />
+  <project path="device/qcom/sepolicy_vndr-legacy-um" name="platform_device_qcom_sepolicy_vndr-legacy-um" remote="colt" revision="c14" />
 
   <!-- Hardware -->
-  <project path="hardware/colt/interfaces" name="platform_hardware_colt_interfaces" remote="colt" revision="minimal" />
-  <project path="hardware/interfaces" name="platform_hardware_interfaces" remote="colt" revision="minimal" />
+  <project path="hardware/google/pixel" name="platform_hardware_google_pixel" remote="colt" />
+  <project path="hardware/interfaces" name="platform_hardware_interfaces" groups="pdk" remote="colt" />
+  <project path="hardware/libhardware" name="platform_hardware_libhardware" groups="pdk" remote="colt" />
+  <project path="hardware/ril" name="platform_hardware_ril" groups="pdk" remote="colt" />
+  <project path="hardware/qcom/wlan" name="platform_hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" remote="colt" />
 
-  <!-- Packages -->
-  <project path="packages/apps/Aperture" name="platform_packages_apps_Aperture"  remote="colt" revision="minimal" />
-  <project path="packages/apps/ColtEnigma" name="platform_packages_apps_ColtEnigma" remote="colt" revision="minimal" />
-  <project path="packages/apps/GameSpace" name="platform_packages_apps_GameSpace" remote="colt" revision="minimal" />
-  <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="colt" revision="minimal" />
-  <project path="packages/apps/ParanoidSense" name="platform_packages_apps_ParanoidSense" remote="colt-gitlab" />
-  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="colt" revision="minimal" />
-  <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" remote="colt" revision="minimal" />
-  <project path="packages/services/OmniJaws" name="platform_packages_services_OmniJaws" remote="colt" revision="minimal" />
-  <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" remote="colt" revision="minimal"/>
-  <project path="packages/services/Telephony" name="platform_packages_services_Telephony" remote="colt" revision="minimal"/>
-  <project path="packages/modules/Bluetooth" name="platform_packages_modules_Bluetooth" remote="colt" revision="minimal"/>
-  <project path="packages/providers/MediaProvider" name="platform_packages_providers_MediaProvider" remote="colt" revision="minimal"/>
+  <!-- Framework repos -->
+  <project path="frameworks/av" name="platform_frameworks_av" remote="colt" />
+  <project path="frameworks/base" name="platform_frameworks_base" remote="colt" />
+  <project path="frameworks/native" name="platform_frameworks_native" remote="colt" />
+  <project path="frameworks/libs/net" name="platform_frameworks_libs_net" remote="colt" />
+ 
+  <!-- Packages repos -->
+  <project path="packages/apps/Nfc" name="platform_packages_apps_Nfc" groups="apps_nfc,pdk-fs" remote="colt" />
+  <project path="packages/apps/RepainterServicePriv" name="platform_packages_apps_RepainterServicePriv" groups="pdk" remote="colt" />  
+  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="colt" />
+  <project path="packages/apps/SettingsIntelligence" name="platform_packages_apps_SettingsIntelligence" groups="pdk-fs" remote="colt" />
+  <project path="packages/apps/TouchGestures" name="platform_packages_apps_TouchGestures" remote="colt" />
+  <project path="packages/apps/Updater" name="platform_packages_apps_Updater" remote="colt" />
+  <project path="packages/modules/adb" name="platform_packages_modules_adb" remote="colt" />  
+  <project path="packages/modules/Bluetooth" name="platform_packages_modules_bluetooth" remote="colt" />  
+  <project path="packages/modules/Connectivity" name="platform_packages_modules_Connectivity" remote="colt" />
 
-  <!-- Vendor -->
-  <project path="vendor/colt" name="platform_vendor_colt" remote="colt" revision="minimal" />
+  <!-- Prebuilts -->
+  <project path="prebuilts/build-tools" name="platform_prebuilts_build-tools" groups="pdk" clone-depth="1" remote="colt" />
 
-  <!-- System -->
-  <project path="system/sepolicy" name="platform_system_sepolicy" remote="colt" revision="minimal" />
+  <!-- System repos -->
+  <project path="system/bpf" name="platform_system_bpf" groups="pdk" remote="colt" />
+  <project path="system/core" name="platform_system_core" remote="colt" />
+  <project path="system/netd" name="platform_system_netd" groups="pdk" remote="colt" />
+  <project path="system/security" name="platform_system_security" groups="pdk" remote="colt" />
+  <project path="system/sepolicy" name="platform_system_sepolicy" groups="pdk" remote="colt" />
+  <project path="system/tools/mkbootimg" name="platform_system_tools_mkbootimg" groups="pdk" remote="colt" />
+  <project path="system/update_engine" name="platform_system_update_engine" groups="pdk" remote="colt" />
+  <project path="system/vold" name="platform_system_vold" groups="pdk" remote="colt" />
+
+  <!-- Vendor repos -->
+  <project path="vendor/colt" name="platform_vendor_colt" remote="colt" />
+
+  <!-- External -->
+  <project path="external/gptfdisk" name="platform_external_gptfdisk" groups="pdk" remote="colt" />
+  <project path="external/libnl" name="platform_external_libnl" groups="pdk" remote="colt" />
+  <project path="external/mksh" name="platform_external_mksh" groups="pdk" remote="colt" />
+  <project path="external/tinycompress" name="platform_external_tinycompress" groups="pdk" remote="colt" />
+  <project path="external/tinyxml" name="platform_external_tinyxml" groups="pdk" remote="colt" />
 
 </manifest>
