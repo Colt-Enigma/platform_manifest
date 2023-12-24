@@ -39,6 +39,11 @@
   <remove-project name="device/google/pantah-kernel" />
   <remove-project name="device/google/raviole" />
   <remove-project name="device/google/raviole-kernel" />
+  <remove-project name="device/google/shusky" />
+  <remove-project name="device/google/shusky-sepolicy" />
+  <remove-project name="device/google/shusky-kernel" />
+  <remove-project name="device/google/zuma" />
+  <remove-project name="device/google/zuma-sepolicy" />
   <remove-project name="device/google/redbull" />
   <remove-project name="device/google/redbull-kernel" />
   <remove-project name="device/google/redbull-sepolicy" />
