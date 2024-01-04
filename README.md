@@ -2,7 +2,7 @@
 <img src="https://github.com/Colt-Enigma/platform_manifest/blob/c12/assets/Banner_1.png" > 
 </p>
 
-ColtOS Version-13.3
+ColtOS Version-14.0
 ===============================
 
 [![Download ColtOS](https://img.shields.io/sourceforge/dm/coltos.svg?color=3498DB&label=ColtOS%20Downloads&style=for-the-badge&labelColor=1B4F72&logo=sourceforge)](https://sourceforge.net/projects/coltos/files)
@@ -41,7 +41,7 @@ To initialize your local repository using the ColtOS trees, use a
 command like this:
 
 ```bash
-  repo init -u https://github.com/Colt-Enigma/platform_manifest -b minimal
+  repo init -u https://github.com/Colt-Enigma/platform_manifest -b c14
 ```
   
 Then to sync up:
@@ -50,6 +50,12 @@ Then to sync up:
 ```bash
 repo sync
 ```
+
+or use 
+```bash
+repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
+```
+
 Finally to build:
 -----------------
 
