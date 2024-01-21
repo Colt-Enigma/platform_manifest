@@ -2,7 +2,7 @@
 <manifest>
   <remote  name="LineageOS"
            fetch="https://github.com/"
-           revision="lineage-20.0" />
+           revision="lineage-21.0" />
 
   <!-- Hardware -->
   <project path="hardware/lineage/compat" name="LineageOS/android_hardware_lineage_compat" remote="LineageOS" />
@@ -15,7 +15,7 @@
   <project path="hardware/qcom/gps" name="LineageOS/android_hardware_qcom_gps" groups="qcom,qcom_gps,pdk-qcom" remote="LineageOS" revision="lineage-21.0" />
   <project path="hardware/qcom/media" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk-qcom" remote="LineageOS" revision="lineage-21.0" />
   <project path="hardware/qcom-caf/bootctrl" name="LineageOS/android_hardware_qcom_bootctrl" groups="qcom,waipio-vendor" revision="lineage-21.0-caf" remote="LineageOS" />
-  <project path="hardware/qcom-caf/common" name="LineageOS/android_hardware_qcom-caf_common" groups="qcom" remote="LineageOS" >
+  <project path="hardware/qcom-caf/common" name="platform_hardware_qcom-caf_common" remote="colt" >
     <!-- Add guard for AOSP hardware/qcom dir -->
     <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
     <!-- Add guards for CAF repositories -->
@@ -77,6 +77,9 @@
   <project path="tools/extract-utils" name="LineageOS/android_tools_extract-utils" remote="LineageOS" />
   <project path="prebuilts/tools-lineage" name="LineageOS/android_prebuilts_tools-lineage" clone-depth="1" remote="LineageOS" />
 
+  <!-- CodeLinaro additions -->
+  <project path="external/json-c" name="android_external_json-c" groups="qcom,qssi" remote="lineage" />
+
   <!-- Inline kernel build -->
   <project path="external/dwarves" name="platform/external/dwarves" remote="aosp" revision="3c8f7e8b2cf7ff902b71c42d00fda30f30114b07" />
   <project path="prebuilts/clang/kernel/linux-x86/clang-r416183b" name="LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b" clone-depth="1" remote="LineageOS" />
@@ -95,7 +98,7 @@
   <project path="vendor/qcom/opensource/fm-commonsys" name="LineageOS/android_vendor_qcom_opensource_fm-commonsys" groups="qcom,qssi" remote="LineageOS" />
   <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,waipio-vendor" remote="LineageOS" />
   <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um" name="LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,lahaina" revision="lineage-21.0-legacy-um" remote="LineageOS" />
-  <project path="vendor/qcom/opensource/dataservices" name="LineageOS/android_vendor_qcom_opensource_dataservices" groups="qcom,waipio-vendor" remote="LineageOS" />
+  <project path="vendor/qcom/opensource/dataservices" name="LineageOS/android_vendor_qcom_opensource_dataservices" groups="qcom,waipio-vendor" remote="LineageOS" revision="lineage-21.0" />
   <project path="vendor/qcom/opensource/healthd-ext" name="LineageOS/android_vendor_qcom_opensource_healthd-ext" groups="qcom,lahaina" remote="LineageOS" />
   <project path="vendor/qcom/opensource/interfaces" name="LineageOS/android_vendor_qcom_opensource_interfaces" groups="qcom,qssi" remote="LineageOS" />
   <project path="vendor/qcom/opensource/libfmjni" name="LineageOS/android_vendor_qcom_opensource_libfmjni" groups="qcom" remote="LineageOS" />
