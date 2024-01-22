@@ -84,6 +84,7 @@
 
   <!-- Vendor repos -->
   <project path="vendor/colt" name="platform_vendor_colt" remote="colt" />
+  <project path="vendor/gms" name="vendor_google_gms" remote="colt-gitlab" clone-depth="1" />
 
   <!-- External -->
   <project path="external/gptfdisk" name="platform_external_gptfdisk" groups="pdk" remote="colt" />
